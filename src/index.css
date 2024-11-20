@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+@layer components {
+	.max-container {
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+
+	.input {
+		@apply appearance-none bg-transparent border-none w-full text-grey mr-3 py-1 px-2 leading-tight focus:outline-none;
+	}
+}
+
+@layer utilities {
+	.padding {
+		@apply sm:px-16 px-8 sm:py-24 py-12;
+	}
+
+	.padding-x {
+		@apply sm:px-16 px-8;
+	}
+
+	.padding-y {
+		@apply sm:py-24 py-12;
+	}
+
+	.padding-l {
+		@apply sm:pl-16 pl-8;
+	}
+
+	.padding-r {
+		@apply sm:pr-16 pr-8;
+	}
+
+	.padding-t {
+		@apply sm:pt-24 pt-12;
+	}
+
+	.padding-b {
+		@apply sm:pb-24 pb-12;
+	}
+
+	.info-text {
+		@apply font-inter text-slate-gray text-lg leading-7;
+	}
+}
