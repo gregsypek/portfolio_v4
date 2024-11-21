@@ -1,5 +1,41 @@
+import { motion } from "framer-motion";
+import { navSocialLinks } from "../constants";
+import Sidebar from "./sidebar/Sidebar";
+
 const Nav = () => {
-	return <div>Nav</div>;
+	return (
+		<header className="padding-x py-8 w-full  font-inter">
+			<nav className="flex justify-between items-center max-container ">
+				<Sidebar />
+				<motion.span
+					className="max-lg:hidden leading-normal text-lg text-"
+					initial={{ opacity: 0, scale: 0.5 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 0.5 }}
+				>
+					GRZEGORZ SYPEK
+				</motion.span>
+
+				<ul className="flex-1 flex justify-end items-center gap-8 ">
+					{navSocialLinks.map((item) => {
+						const Icon = item.icon;
+						return (
+							<li key={item.label}>
+								<a
+									href={item.href}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="hover:text-primary-red"
+								>
+									<Icon size={24} />
+								</a>
+							</li>
+						);
+					})}
+				</ul>
+			</nav>
+		</header>
+	);
 };
 
 export default Nav;

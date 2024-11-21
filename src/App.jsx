@@ -7,7 +7,7 @@ import Hero from "./sections/Hero";
 
 function App() {
 	return (
-		<main className="relative bg-primary-dark text-white">
+		<main className="relative bg-black text-white">
 			<Nav />
 			<section className="xl:padding-1 wide:padding-r padding-b">
 				<Hero />

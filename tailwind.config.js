@@ -44,6 +44,8 @@ export default {
 					"linear-gradient(to bottom, #FFFFFF 38%, #999999 100%)",
 			},
 			backgroundColor: {
+				backgroundGradient:
+					"background: linear-gradient(180deg, #0c0c1d, #111132)",
 				backgroundCard: "linear-gradient(to bottom, #58324A 40%, #5E3F60 100%)",
 			},
 			stroke: {
