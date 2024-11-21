@@ -38,10 +38,8 @@ export default {
 			},
 			backgroundImage: {
 				gradient: "url('assets/images/hero_gradient.svg')",
-			},
-			textColor: {
-				gradientHeading:
-					"linear-gradient(to bottom, #FFFFFF 38%, #999999 100%)",
+				"text-gradient":
+					"linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0.38) 100%)",
 			},
 			backgroundColor: {
 				backgroundGradient:
@@ -49,7 +47,7 @@ export default {
 				backgroundCard: "linear-gradient(to bottom, #58324A 40%, #5E3F60 100%)",
 			},
 			stroke: {
-				transparentStroke: "linear-gradient(to bottom, #FFFFFF, #999999)",
+				transparent: "linear-gradient(to bottom, #FFFFFF, #999999)",
 			},
 		},
 	},
@@ -80,5 +78,7 @@ export default {
 				},
 			});
 		},
+		"@tailwindcss/forms",
+		"@tailwindcss/typography",
 	],
 };
