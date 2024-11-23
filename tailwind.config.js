@@ -26,7 +26,7 @@ export default {
 				"dark-grey": "#7d7e80",
 				"blue-grey": "#95A1AD",
 				"pink-grey": "#9b8595",
-				grey: "#B9B9B9",
+				gray: "#AEAEAE",
 				"light-grey": "#d8d8d8",
 				white: "#ffffff",
 			},
