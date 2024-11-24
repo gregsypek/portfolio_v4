@@ -29,3 +29,21 @@ export const navLinks = [
 ];
 
 export const skills = ["React", "React Native", "Node", "Next", "Typescript"];
+
+export const aboutInfo = [
+	{
+		id: 1,
+		content:
+			"I am a frontend developer with five years of programming experience.	I specialize in React, React Native, and Vue.js. Recently, I have			been working as an application programmer, utilizing React Native, React, and TypeScript to develop applications for engineers.					Additionally, I worked as a junior developer in Rzeszów on a large e-commerce application.",
+	},
+	{
+		id: 2,
+		content:
+			"I live in Mielec in Poland. I am a self-taught learner who is passionate about computers and coding. In my spare time, I enjoy listening to progressive rock, reading books, and	hiking in the mountains.",
+	},
+	{
+		id: 3,
+		content:
+			"Currently I am looking for a job as a web developer. I am confident that my skills and dedication make me an asset to any team. I am			willing to cooperate and continue my adventure with IT and develop further in this direction.",
+	},
+];

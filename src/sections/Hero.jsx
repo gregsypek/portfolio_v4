@@ -41,7 +41,7 @@ const Hero = () => {
 			className="  flex flex-row justify-start  gap-10 max-container overflow-hidden relative overflow:hidden "
 		>
 			<div
-				className="h-screen w-4/6 sm:w-3/5 md:w-3/5 lg:w-4/5 xl:w-3/4 flex ps-4 md:ps-8 xl:ps-0 flex-col  lg:pt-[180px] pt-6 tiny:pt-[80px] xl:relative "
+				className="h-screen w-4/6 sm:w-3/5 md:w-3/5 lg:w-4/5 xl:w-3/4 flex ps-4 md:ps-8 xl:ps-0 flex-col  lg:pt-[180px] pt-[8.5rem]  xl:relative "
 				style={{
 					//navbar height is 75px
 					height: "calc(100dvh - 75px)",
@@ -50,7 +50,7 @@ const Hero = () => {
 				<h1 className=" text-[48px] sm:text-[60px] md:text-[80px] sm:leading-none xl:text-8xl  leading-10  font-bold bg-text-gradient bg-clip-text text-transparent relative z-20  text-left  align-middle">
 					Web Developer & <br /> Content Creator
 				</h1>
-				<p className="text-xs lg:text-lg text-dark-grey mt-[40px] md:text-base xl:mt-[86px] md:w-3/5  w-2/3 relative z-20 leading-tight text-left  ">
+				<p className="text-xs lg:text-lg text-dark-grey mt-[40px] md:text-base xl:mt-[86px] md:w-3/5  w-2/3 relative z-20 leading-tight text-left">
 					Hi, my name is Greg Sypek. I create and design web pages and projects
 					with attention to details and clarity.
 				</p>
