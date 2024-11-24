@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import { Link as ScrollLink } from "react-scroll";
 import { skills } from "../constants";
 import { useState } from "react";
+import SlidingText from "../components/SlidingText";
 
 // const textVariants = {
 // 	initial: {
@@ -86,23 +87,7 @@ const Hero = () => {
 				// initial="initial"
 				// animate="animate"
 			>
-				{skills.map((skill, index) => (
-					<div
-						key={index}
-						style={{
-							transition: "opacity 1.5s ease-in-out",
-						}}
-					>
-						<p
-							key={index}
-							style={{
-								display: index === currentSkillIndex ? "block" : "none",
-							}}
-						>
-							{skill}
-						</p>
-					</div>
-				))}
+				<SlidingText skills={skills} currentSkillIndex={currentSkillIndex} />
 			</div>
 		</section>
 	);
