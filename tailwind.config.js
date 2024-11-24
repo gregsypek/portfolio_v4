@@ -28,24 +28,24 @@ export default {
 				"pink-grey": "#9b8595",
 				gray: "#AEAEAE",
 				"light-grey": "#d8d8d8",
-				white: "#ffffff",
+				white: "#e7e4e4",
 			},
 			boxShadow: {
 				"3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",
 			},
 			screens: {
 				wide: "1440px",
+				tiny: "440px",
 			},
 			backgroundImage: {
 				gradient: "url('assets/images/hero_gradient.svg')",
 				"text-gradient":
 					"linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0.38) 100%)",
+				"background-gradient": "linear-gradient(180deg, #0c0c1d, #111132)",
+				"background-card":
+					"linear-gradient(to bottom, #58324A 40%, #5E3F60 100%)",
 			},
-			backgroundColor: {
-				backgroundGradient:
-					"background: linear-gradient(180deg, #0c0c1d, #111132)",
-				backgroundCard: "linear-gradient(to bottom, #58324A 40%, #5E3F60 100%)",
-			},
+
 			stroke: {
 				transparent: "linear-gradient(to bottom, #FFFFFF, #999999)",
 			},
@@ -66,11 +66,11 @@ export default {
 					"mask-repeat": "no-repeat",
 				},
 				// Gradient zaczyna się od 50% wysokości
-				".mask-gradient-50": {
+				".mask-gradient-30": {
 					"-webkit-mask-image":
-						"linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%)",
+						"linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%)",
 					"mask-image":
-						"linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%)",
+						"linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%)",
 					"-webkit-mask-size": "100% 100%",
 					"mask-size": "100% 100%",
 					"-webkit-mask-repeat": "no-repeat",

@@ -4,7 +4,7 @@ import Sidebar from "./sidebar/Sidebar";
 
 const Nav = () => {
 	return (
-		<header className="padding-x py-8 w-full  font-inter">
+		<header className="padding-x py-[24px] w-full bg-transparent font-inter">
 			<nav className="flex justify-between items-center max-container ">
 				<Sidebar />
 				<motion.span
@@ -25,9 +25,19 @@ const Nav = () => {
 									href={item.href}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="hover:text-primary-red"
+									className="hover:text-pink-grey relative z-[1000]"
 								>
-									<Icon size={24} />
+									<Icon
+										// style={{
+										// 	width: "16px",
+										// 	height: "16px",
+										// 	"@media (min-width: 768px)": {
+										// 		width: "24px",
+										// 		height: "24px",
+										// 	},
+										// }}
+										size={20}
+									/>
 								</a>
 							</li>
 						);

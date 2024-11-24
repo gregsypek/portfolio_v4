@@ -6,7 +6,7 @@ import ToggleButton from "./toggleButton/ToggleButton";
 const variants = {
 	open: {
 		clipPath: "polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%)",
-		backgroundColor: "rgb(255, 255, 255)",
+		backgroundColor: "#e7e4e4",
 		transition: {
 			type: "spring",
 			stiffness: 100,
@@ -18,6 +18,7 @@ const variants = {
 
 		opacity: 0, // Hide the element completely
 		backgroundColor: "rgba(0, 0, 0, 0.01)",
+		zIndex: 10,
 		transition: {
 			delay: 0.3,
 			opacity: { duration: 0.3 }, // Ensure it fades out quickly
@@ -38,7 +39,7 @@ const Sidebar = () => {
 			animate={open ? "open" : "closed"}
 		>
 			<motion.div
-				className="z-[999] fixed top-0 left-0 bottom-0 w-[400px] bg-white border border-white"
+				className="z-[999] fixed top-0 left-0 bottom-0 w-[300px] md:w-[400px] bg-white border border-white"
 				variants={variants}
 			>
 				<Links />

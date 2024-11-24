@@ -27,3 +27,5 @@ export const navLinks = [
 	"Experience",
 	"Contact",
 ];
+
+export const skills = ["React", "React Native", "Node", "Next", "Typescript"];

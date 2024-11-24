@@ -33,7 +33,7 @@ const Links = () => {
 		>
 			{navLinks.map((item) => (
 				<motion.a
-					className="text-4xl"
+					className="text-3xl md:text-4xl"
 					href={`#${item}`}
 					key={item}
 					variants={itemVariants}

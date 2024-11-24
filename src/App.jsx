@@ -7,24 +7,26 @@ import Hero from "./sections/Hero";
 
 function App() {
 	return (
-		<main className="relative bg-black text-white">
-			<Nav />
-			<section className="xl:padding-l wide:padding-r padding-b">
-				<Hero />
-			</section>
-			<section className="padding">
+		<>
+			<div className="relative bg-background-gradient text-white before:absolute before:inset-0 before:bg-gradient before:w-full before:h-full  before:bg-no-repeat before:bg-center before:bg-cover before:pointer-events-none before:z-10  max-h-screen">
+				<Nav className="absolute z-20" />
+				<main className="xl:padding-l wide:padding-r padding-b relative z-20">
+					<Hero />
+				</main>
+			</div>
+			<section className="padding" id="About">
 				<About />
 			</section>
-			<section className="padding">
+			<section className="padding" id="Experience">
 				<Experience />
 			</section>
-			<section className="padding">
+			<section className="padding" id="Contact">
 				<Contact />
 			</section>
-			<section className="padding">
+			<footer className="padding" id="Footer">
 				<Footer />
-			</section>
-		</main>
+			</footer>
+		</>
 	);
 }
 

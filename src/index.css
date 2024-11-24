@@ -20,6 +20,33 @@
 	.input {
 		@apply appearance-none bg-transparent border-none w-full text-grey mr-3 py-1 px-2 leading-tight focus:outline-none;
 	}
+	/* .before-gradient {
+		position: relative;
+	}
+
+	.before-gradient::before {
+		content: '""';
+		position: absolute;
+		inset: 0;
+		background-image: url("/hero_gradient.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		pointer-events: none;
+		z-index: 10;
+	} */
+	.slidingText {
+		position: absolute;
+		font-size: clamp(60px, 16vw, 160px);
+		bottom: 20px;
+		left: 0px;
+		white-space: wrap;
+		color: #ffffff09;
+		width: 100%;
+		font-weight: bold;
+		line-height: 1;
+		z-index: 2;
+	}
 }
 
 @layer utilities {
