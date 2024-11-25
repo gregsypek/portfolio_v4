@@ -41,7 +41,7 @@ const Hero = () => {
 			className="  flex flex-row justify-start  gap-10 max-container overflow-hidden relative overflow:hidden "
 		>
 			<div
-				className="h-screen w-4/6 sm:w-3/5 md:w-3/5 lg:w-4/5 xl:w-3/4 flex ps-4 md:ps-8 xl:ps-0 flex-col  lg:pt-[180px] pt-[8.5rem]  xl:relative "
+				className="h-screen w-4/6 sm:w-3/5 md:w-3/5 lg:w-4/5 xl:w-3/4 flex ps-4 md:ps-8 xl:ps-0 flex-col lg:pt-[180px] pt-[8.5rem]  xl:relative "
 				style={{
 					//navbar height is 75px
 					height: "calc(100dvh - 75px)",

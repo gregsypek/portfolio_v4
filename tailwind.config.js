@@ -17,6 +17,7 @@ export default {
 			fontFamily: {
 				inter: ["Inter", "serif"],
 			},
+
 			colors: {
 				"primary-red": "#A41045",
 				"secondary-violet": "#892066",
@@ -76,6 +77,37 @@ export default {
 					"-webkit-mask-repeat": "no-repeat",
 					"mask-repeat": "no-repeat",
 				},
+				".about-header": {
+					fontSize: "36px",
+					"@screen sm": {
+						fontSize: "48px",
+						lineHeight: "none",
+					},
+					"@screen md": {
+						fontSize: "68px",
+					},
+					"@screen xl": {
+						fontSize: "var(--tw-text-8xl)", // Tailwind interpretuje 8xl
+					},
+					fontWeight: "bold",
+					lineHeight: "2.5rem", // Dostosowanie
+					color: "transparent",
+					// backgroundImage: "var(--tw-bg-gradient)",
+					backgroundClip: "text",
+					textAlign: "left",
+					verticalAlign: "middle",
+					padding: "1rem",
+					position: "relative",
+					zIndex: 20,
+				},
+				// aboutGrid: {
+				// 	"grid-template-columns": "repeat(9, 5vw)",
+				// 	"grid-template-rows": "repeat(4, 5vw)",
+				// 	"@screen md": {
+				// 		"grid-template-columns": "repeat(9, 8vw)",
+				// 		"grid-template-rows": "repeat(4, 88vw)",
+				// 	},
+				// },
 			});
 		},
 		"@tailwindcss/forms",
