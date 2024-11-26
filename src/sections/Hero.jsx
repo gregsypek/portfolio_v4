@@ -41,7 +41,7 @@ const Hero = () => {
 			className="  flex flex-row justify-start  gap-10 max-container overflow-hidden relative overflow:hidden "
 		>
 			<div
-				className="h-screen w-4/6 sm:w-3/5 md:w-3/5 lg:w-4/5 xl:w-3/4 flex ps-4 md:ps-8 xl:ps-0 flex-col lg:pt-[180px] pt-[8.5rem]  xl:relative "
+				className="h-screen w-4/6 sm:w-3/5 md:w-3/5 lg:w-4/5 xl:w-3/4 flex ps-4 md:ps-8 xl:ps-0 flex-col lg:pt-[180px] pt-[1.5rem]  xl:relative "
 				style={{
 					//navbar height is 75px
 					height: "calc(100dvh - 75px)",
@@ -55,18 +55,15 @@ const Hero = () => {
 					with attention to details and clarity.
 				</p>
 				<div className="mt-9 xl:mt-12 max-lg:flex-col flex flex-wrap gap-8  justify-start items-start relative z-10">
-					<button>
-						<ScrollLink to="Projects" smooth={true} duration={300}>
-							<Button type="red" className="rounded-sm">
-								See the Latest Works
-							</Button>
-						</ScrollLink>
-					</button>
-					<button className="btn_red">
-						<ScrollLink to="Contact" smooth={true} duration={500}>
-							<Button type="empty">Contact Me</Button>
-						</ScrollLink>
-					</button>
+					<ScrollLink to="Projects" smooth={true} duration={300}>
+						<Button type="red" className="rounded-sm">
+							See the Latest Works
+						</Button>
+					</ScrollLink>
+
+					<ScrollLink to="Contact" smooth={true} duration={500}>
+						<Button type="empty">Contact Me</Button>
+					</ScrollLink>
 				</div>
 			</div>
 			<div

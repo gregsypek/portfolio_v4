@@ -8,7 +8,7 @@ import Hero from "./sections/Hero";
 function App() {
 	return (
 		<div className="bg-background-gradient  text-white relative">
-			<div className="relative  before:absolute before:inset-0 before:bg-gradient before:w-full before:h-full  before:bg-no-repeat before:bg-center before:bg-cover before:pointer-events-none before:z-10  max-h-screen">
+			<div className="relative hero-gradient  max-h-screen">
 				<Nav className="absolute z-20" />
 				<main className="xl:padding-l wide:padding-r padding-b relative z-20">
 					<Hero />

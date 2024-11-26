@@ -9,6 +9,9 @@ function Button({ disabled, children, to, type, onClick }) {
 		red:
 			normal +
 			"text-light-grey bg-primary-red hover:bg-gray hover:border-gray hover:text-primary-red focus:ring-secondary-violet focus:ring border-primary-red ",
+		blue:
+			normal +
+			"text-light-grey bg-tertiary-blue hover:bg-gray hover:border-gray hover:text-primary-red focus:ring-secondary-violet focus:ring border-tertiary-blue ",
 
 		empty:
 			normal +

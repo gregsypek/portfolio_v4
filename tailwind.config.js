@@ -40,6 +40,7 @@ export default {
 			},
 			backgroundImage: {
 				gradient: "url('assets/images/hero_gradient.svg')",
+				gradient2: "url('assets/images/about_gradient.svg')",
 				"text-gradient":
 					"linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0.38) 100%)",
 				"background-gradient": "linear-gradient(180deg, #0c0c1d, #111132)",
@@ -100,6 +101,14 @@ export default {
 					position: "relative",
 					zIndex: 20,
 				},
+				// ".border-gradient": {
+				// 	position: "relative",
+				// 	zIndex: 1,
+				// 	background: "linear-gradient(to bottom, #FFFFFF, #999999)",
+				// 	WebkitMask: "padding-box",
+				// 	mask: "padding-box",
+				// 	backgroundClip: "border-box",
+				// },
 				// aboutGrid: {
 				// 	"grid-template-columns": "repeat(9, 5vw)",
 				// 	"grid-template-rows": "repeat(4, 5vw)",
