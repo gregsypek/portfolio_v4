@@ -4,7 +4,7 @@ import { aboutInfo } from "../constants";
 
 const About = () => {
 	return (
-		<div className="max-container my-36 h-full about-gradient">
+		<div className="max-container my-36 h-screen about-gradient">
 			<div className="aspect-square inline-block border-2 border-white rounded-md md:hidden">
 				<h1 className="section-header relative z-20 text-left align-middle p-4 ">
 					About <br /> Me
@@ -18,10 +18,10 @@ const About = () => {
 					</h1>
 				</div>
 				{/* SQUARE 2  */}
-				<div className="about-square2 "></div>
+				<div className="about-square2  "></div>
 
 				{aboutInfo.map((info) => (
-					<p key={info.id} className={info.className}>
+					<p key={info.id} className={`${info.className} text-dark-grey`}>
 						{info.content}
 					</p>
 				))}

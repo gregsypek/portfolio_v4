@@ -18,6 +18,20 @@ function Button({ disabled, children, to, type, onClick }) {
 			"border-light-dark text-light-grey hover:border-primary-red hover:text-white focus:ring-text-white focus:ring ",
 	};
 
+	// Sprawdzamy, czy link jest zewnętrzny
+	if (to?.startsWith("http")) {
+		return (
+			<a
+				href={to}
+				className={styles[type]}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				{children}
+			</a>
+		);
+	}
+
 	if (to) {
 		return (
 			<Link to={to} className={styles[type]}>

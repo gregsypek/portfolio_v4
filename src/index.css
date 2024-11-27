@@ -85,7 +85,7 @@
 		@apply font-inter text-slate-gray text-lg leading-7;
 	}
 	.about-gradient {
-		@apply before:absolute before:inset-0  before:bg-gradient2 before:w-full before:h-full before:bg-no-repeat before:bg-center before:bg-cover before:pointer-events-none before:z-10;
+		@apply before:absolute before:inset-0 before:-translate-x-[30%] before:-translate-y-[30%] before:bg-gradient2 before:w-full before:h-full before:bg-no-repeat before:bg-center before:bg-cover before:pointer-events-none before:z-10;
 	}
 	.hero-gradient {
 		@apply before:absolute before:inset-0 before:bg-gradient before:w-full before:h-full  before:bg-no-repeat before:bg-center before:bg-cover before:pointer-events-none before:z-10;
