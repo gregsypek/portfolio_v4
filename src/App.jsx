@@ -16,7 +16,7 @@ function App() {
 					<div className="absolute bottom-0 left-0 w-[80vw] h-[250px] bg-[#0F0E24] blur-[81px]"></div>
 				</main>
 			</div>
-			<section className="padding" id="About">
+			<section className="padding-x" id="About">
 				<About />
 			</section>
 			<section className="padding" id="Experience">
