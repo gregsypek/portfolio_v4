@@ -67,7 +67,7 @@ const Hero = () => {
 				</div>
 			</div>
 			<div
-				className=" absolute  top-0 lg:top-18 tiny:translate-x-52 sm:translate-x-48 md:translate-x-48  xl:translate-x-0 translate-x-32 
+				className=" absolute top-0 lg:top-18 tiny:translate-x-52 sm:translate-x-48 md:translate-x-48 xl:translate-x-0 translate-x-32 
 			   min-h-screen xl: -right-20   "
 			>
 				<img
@@ -75,7 +75,8 @@ const Hero = () => {
 					alt="Grzegorz"
 					width={820}
 					height={1000}
-					className=" object-cover  relative  z-10  h-full mask-gradient-30"
+					className=" object-cover relative z-10 md:h-full mask-gradient-30"
+					loading="lazy"
 				/>
 			</div>
 			<div
