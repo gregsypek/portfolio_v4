@@ -81,7 +81,7 @@ function Project({ project }) {
 						</div>
 						<div className="flex gap-5 my-auto mx-auto lg:mx-0 lg:hidden">
 							<Button onClick={handleNext}>
-								<LuArrowLeftCircle size={32} stroke="#18457C" />
+								<LuArrowLeftCircle size={32} stroke="white" />
 							</Button>
 							<Button onClick={handlePrev} disabled={isSingleImage}>
 								<LuArrowRightCircle size={32} stroke="#18457C" />
@@ -97,7 +97,7 @@ function Project({ project }) {
 						</Button>
 					</div>
 				</div>
-				<div className="border border-pink-gray rounded-xl p-1 md:p-5 order-1 lg:order-none h-[350px] sm:h-[450px] lg:h-[550px] ">
+				<div className="border-[2px] border-[#424345] rounded-xl p-1 md:p-5 order-1 lg:order-none h-[350px] sm:h-[450px] lg:h-[550px] ">
 					<img
 						className="w-full hover:cursor-pointer h-full object-contain hover:scale-y-105 hover:scale-x-105 rounded-xl hover:rounded-xl transition-all  duration-350"
 						src={images[currentImageIndex]}

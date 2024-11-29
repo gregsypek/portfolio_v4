@@ -90,15 +90,15 @@
 	.hero-gradient {
 		@apply before:absolute before:inset-0 before:bg-gradient before:w-full before:h-full  before:bg-no-repeat before:bg-center before:bg-cover before:pointer-events-none before:z-10;
 	}
-		.about-paragraph {
-			@apply text-base lg:text-xl xl:text-2xl xl:leading-normal text-gray leading-tight z-20 relative;
-		}
-	
-		.about-square1 {
-			@apply relative z-20 aspect-square border-[3px] border-gray rounded-md hidden md:inline-block md:row-start-1 md:row-span-3 md:col-start-1 md:col-span-3;
-		}
-	
-		.about-square2 {
-			@apply hidden relative z-20 aspect-square md:block md:col-start-2 md:col-span-3 md:row-start-4 md:row-span-3 bg-no-repeat bg-contain bg-[url('/about.png')] -translate-y-[100px] rounded-md;
-		}
+	.about-paragraph {
+		@apply text-base lg:text-xl xl:text-2xl xl:leading-normal text-gray leading-tight z-20 relative;
+	}
+
+	.about-square1 {
+		@apply relative z-20 aspect-square border-[3px] border-gray rounded-md hidden md:inline-block md:row-start-1 md:row-span-3 md:col-start-1 md:col-span-3;
+	}
+
+	.about-square2 {
+		@apply hidden relative z-20 aspect-square md:block md:col-start-2 md:col-span-3 md:row-start-4 md:row-span-3 bg-no-repeat bg-contain bg-[url('/about.png')] -translate-y-[100px] rounded-md;
+	}
 }

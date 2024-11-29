@@ -1,7 +1,7 @@
 import Nav from "./components/Nav";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
-import Experience from "./sections/Projects";
+import Experience from "./sections/Experience";
 import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
@@ -23,9 +23,9 @@ function App() {
 			<section className="padding" id="Projects">
 				<Projects />
 			</section>
-			{/* <section className="padding" id="Experience">
+			<section className="padding" id="Experience">
 				<Experience />
-			</section> */}
+			</section>
 			<section className="padding" id="Contact">
 				<Contact />
 			</section>

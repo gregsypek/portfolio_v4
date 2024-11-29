@@ -45,7 +45,7 @@ export default {
 					"linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0.38) 100%)",
 				"background-gradient": "linear-gradient(180deg, #0c0c1d, #111132)",
 				"background-card":
-					"linear-gradient(to bottom, #58324A 40%, #5E3F60 100%)",
+					"linear-gradient(to bottom, rgba(88, 50, 74, 39) 0%, rgba(94, 63, 96, 0) 100%, rgba(10, 12, 16,100%) 100%)",
 			},
 
 			stroke: {

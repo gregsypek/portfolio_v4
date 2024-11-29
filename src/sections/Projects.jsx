@@ -9,7 +9,9 @@ const Projects = () => {
 			{projects.map((project, index) => (
 				<>
 					<Project key={project.id} project={project} />
-					{index != projects.length - 1 && <hr className="my-8 lg:my-16" />}
+					{index != projects.length - 1 && (
+						<hr className="my-8 lg:my-16 xl:opacity-0" />
+					)}
 				</>
 			))}
 		</div>
