@@ -39,7 +39,9 @@ const Sidebar = () => {
 			animate={open ? "open" : "closed"}
 		>
 			<motion.div
-				className="z-[999] fixed top-0 left-0 bottom-0 w-[300px] md:w-[400px] bg-white border border-white"
+				className={`${
+					!open && "hidden"
+				} z-[999] fixed top-0 left-0 bottom-0 w-[300px] md:w-[400px] bg-white border border-white`}
 				variants={variants}
 			>
 				<Links />

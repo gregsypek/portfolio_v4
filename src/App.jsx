@@ -8,7 +8,7 @@ import Projects from "./sections/Projects";
 
 function App() {
 	return (
-		<div className="bg-background-gradient  text-white relative">
+		<div className="bg-primary-dark  text-white relative">
 			<div className="relative hero-gradient  max-h-screen">
 				<Nav className="absolute z-20" />
 				<main className="xl:padding-l wide:padding-r padding-b relative z-20">

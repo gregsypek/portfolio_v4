@@ -41,11 +41,14 @@ export default {
 			backgroundImage: {
 				gradient: "url('assets/images/hero_gradient.svg')",
 				gradient2: "url('assets/images/about_gradient.svg')",
+				gradient3: "url('assets/images/skills_gradient.svg')",
 				"text-gradient":
 					"linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0.38) 100%)",
 				"background-gradient": "linear-gradient(180deg, #0c0c1d, #111132)",
 				"background-card":
-					"linear-gradient(to bottom, rgba(88, 50, 74, 39) 0%, rgba(94, 63, 96, 0) 100%, rgba(10, 12, 16,100%) 100%)",
+					"linear-gradient(to bottom, hsl(296, 31%, 17%,1) 20%, rgba(94, 63, 96, 0) 100%, rgba(10, 12, 16,100%) 100%)",
+				"background-form":
+					"linear-gradient(to bottom, rgb(88, 50, 74, 40%) 0%, rgb(94, 63, 96, 0) 100%, rgb(10, 12, 16, 1) 100%)",
 			},
 
 			stroke: {

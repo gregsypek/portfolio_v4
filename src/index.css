@@ -18,7 +18,7 @@
 	}
 
 	.input {
-		@apply appearance-none bg-transparent border-none w-full text-grey mr-3 py-1 px-2 leading-tight focus:outline-none;
+		@apply appearance-none bg-transparent border-none w-full text-gray mr-3 py-1 px-2 leading-tight focus:outline-none;
 	}
 	/* .before-gradient {
 		position: relative;
@@ -87,6 +87,9 @@
 	.about-gradient {
 		@apply before:absolute before:inset-0 before:-translate-x-[30%] before:-translate-y-[30%] before:bg-gradient2 before:w-full before:h-full before:bg-no-repeat before:bg-center before:bg-cover before:pointer-events-none before:z-10;
 	}
+	.skills-gradient {
+		@apply before:absolute before:inset-0 before:-translate-x-[30%] before:-translate-y-[30%] before:bg-gradient3 before:w-full before:h-full before:bg-no-repeat before:bg-center before:bg-cover before:pointer-events-none before:z-10;
+	}
 	.hero-gradient {
 		@apply before:absolute before:inset-0 before:bg-gradient before:w-full before:h-full  before:bg-no-repeat before:bg-center before:bg-cover before:pointer-events-none before:z-10;
 	}
@@ -101,4 +104,17 @@
 	.about-square2 {
 		@apply hidden relative z-20 aspect-square md:block md:col-start-2 md:col-span-3 md:row-start-4 md:row-span-3 bg-no-repeat bg-contain bg-[url('/about.png')] -translate-y-[100px] rounded-md;
 	}
+	/* .phoneSvg {
+		@apply max-md:w-1/2 max-md:h-1/2;
+	} */
+	.cls-1 {
+		@apply stroke-gray;
+	}
+	.cls-2 {
+		@apply stroke-[#58324a];
+	}
+	.label {
+		@apply absolute left-0  opacity-0 bg-[#58324a] border border-white peer-focus:rounded-md text-sm duration-100 ease-linear peer-placeholder-shown:translate-x-0 peer-placeholder-shown:text-base peer-placeholder-shown:text-primary-dark  peer-focus:opacity-100 peer-focus:-translate-y-4 peer-focus:text-white peer-focus:text-sm peer-focus:ms-2 peer-focus:px-2 lowercase
+	}
+
 }

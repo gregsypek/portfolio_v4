@@ -103,7 +103,9 @@ function Experience() {
 	return (
 		<div className="max-container min-h-screen gap-8 grid h-auto mx-auto grid-rows-[150px_repeat(3,minmax(1fr,auto))]">
 			<div className=" ">
-				<h1 className="section-header mx-auto my-16">Experiences & Skills</h1>
+				<h1 className="section-header mx-auto my-16 relative z-20">
+					Experiences & Skills
+				</h1>
 			</div>
 			{skillBoxes.map((box) => {
 				return (
@@ -111,7 +113,7 @@ function Experience() {
 						box={box}
 						key={box.id}
 						onClick={() => handleSkillBoxClick(box)}
-						className="my-12"
+						className="my-12 "
 					/>
 				);
 			})}
