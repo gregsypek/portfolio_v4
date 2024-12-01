@@ -33,7 +33,7 @@ const Contact = () => {
 	};
 	return (
 		<div
-			className="max-container h-screen  bg-primary-dark rounded-2xl"
+			className="max-container   h-screen bg-primary-dark rounded-2xl lines-gradient"
 			ref={ref}
 		>
 			<h1 className="section-header relative z-20 text-left align-middle p-4 ">
@@ -41,7 +41,7 @@ const Contact = () => {
 			</h1>
 			<motion.div
 				ref={ref}
-				className=" flex-1 mx-auto text-gray flex justify-center  lg:gap-32 xl:gap-48 flex-wrap items-center gap-20 px-5 py-10 mt-10 lg:mt-20 "
+				className=" flex-1 mx-auto   z-20 bg-primary-dark text-gray flex justify-evenly lg:gap-32 xl:gap-48 flex-wrap items-center gap-20 px-5 py-10 mt-10 lg:mt-20 relative before:-bottom-20 before:-top-20 before:-left-20 before:-right-20 before:absolute before:bg-primary-dark  before:-z-10  before:blur-xl "
 				variants={variants}
 				initial="initial"
 				whileInView="animate"
@@ -132,7 +132,7 @@ const Contact = () => {
 					<motion.div variants={variants}>
 						{/* <h2>Address</h2> */}
 
-						<div className="flex justify-center md:justify-start items-center gap-5">
+						<div className="flex justify-center md:justify-start items-center gap-5 ">
 							<motion.div
 								initial={{ opacity: 0 }}
 								whileInView={{ opacity: 1 }}
@@ -304,7 +304,7 @@ const Contact = () => {
 						</div>
 					</motion.div>
 				</motion.div>
-				<div className="flex flex-1  min-w-[330px] max-w-[450px]">
+				<div className="flex flex-1 min-w-[330px] max-w-[450px]">
 					{/* FORM */}
 
 					<div className="flex flex-1 min-h-full flex-col justify-start   mx-auto lg:px-8 bg-background-form rounded-xl py-6 px-12 max-w-[450px]">

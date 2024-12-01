@@ -42,6 +42,7 @@ export default {
 				gradient: "url('assets/images/hero_gradient.svg')",
 				gradient2: "url('assets/images/about_gradient.svg')",
 				gradient3: "url('assets/images/skills_gradient.svg')",
+				lines: "url('assets/images/lines.svg')",
 				"text-gradient":
 					"linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0.38) 100%)",
 				"background-gradient": "linear-gradient(180deg, #0c0c1d, #111132)",

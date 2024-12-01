@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./experience.scss";
 
 import { useWindowSize } from "react-use";
 import { experience } from "../constants";
@@ -12,9 +11,9 @@ function Experience() {
 	const skillColors = [
 		{ background: "transparent", color: "#e7e4e4", border: "#e7e4e4" },
 		{ background: "#18457C", color: "#D2D2D2", border: "transparent" },
-		{ background: "#892066", color: "#D2D2D2", border: "transparent" },
+		{ background: "#58324a", color: "#D2D2D2", border: "transparent" },
 		{ background: "transparent", color: "#e7e4e4", border: "transparent" },
-		{ background: "#18457C", color: "black", border: "transparent" },
+		{ background: "#5b6067", color: "black", border: "transparent" },
 		{ background: "#9b8595", color: "#0A0C10", border: "transparent" },
 	];
 

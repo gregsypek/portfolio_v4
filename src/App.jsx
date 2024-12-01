@@ -26,7 +26,7 @@ function App() {
 			<section className="padding" id="Experience">
 				<Experience />
 			</section>
-			<section className="padding" id="Contact">
+			<section className="padding relative" id="Contact">
 				<Contact />
 			</section>
 			<footer className="padding" id="Footer">
