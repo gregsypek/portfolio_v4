@@ -75,7 +75,7 @@ const Hero = () => {
 					alt="Grzegorz"
 					width={820}
 					height={1000}
-					className=" object-cover relative z-10 md:h-full mask-gradient-30"
+					className="object-cover relative z-10 md:h-full mask-gradient-30"
 					loading="lazy"
 				/>
 			</div>

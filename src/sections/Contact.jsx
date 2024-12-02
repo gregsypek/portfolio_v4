@@ -1,5 +1,4 @@
-import { useRef, useState } from "react";
-// import "./contact.scss";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Button from "../components/Button";
 // import emailjs from "@emailjs/browser";
@@ -19,6 +18,10 @@ const variants = {
 	},
 };
 
+// const publicKey = process.env.REACT_APP_PUBLIC_KEY;
+// const serviceId = process.env.REACT_APP_SERVICE_ID;
+// const templateId = process.env.REACT_APP_TEMPLATE_ID;
+
 const Contact = () => {
 	const ref = useRef();
 	const numberRef = useRef();
@@ -28,12 +31,25 @@ const Contact = () => {
 	// const [error, setError] = useState(false);
 	// const [success, setSuccess] = useState(false);
 
+	// const sendEmail = (e) => {
+	// 	e.preventDefault();
+
+	// 	emailjs.sendForm(publicKey, serviceId, templateId).then(
+	// 		() => {
+	// 			setSuccess(true);
+	// 		},
+	// 		() => {
+	// 			setError(true);
+	// 		}
+	// 	);
+	// };
+
 	const showNumber = () => {
 		numberRef.current.innerText = "+48 504522440";
 	};
 	return (
 		<div
-			className="max-container   h-screen bg-primary-dark rounded-2xl lines-gradient"
+			className="max-container bg-primary-dark rounded-2xl lines-gradient"
 			ref={ref}
 		>
 			<h1 className="section-header relative z-20 text-left align-middle p-4 ">
@@ -43,7 +59,7 @@ const Contact = () => {
 				ref={ref}
 				className=" flex-1 mx-auto   z-20 bg-primary-dark text-gray flex justify-evenly lg:gap-32 xl:gap-48 flex-wrap items-center gap-20 px-5 py-10 mt-10 lg:mt-20 relative before:-bottom-20 before:-top-20 before:-left-20 before:-right-20 before:absolute before:bg-primary-dark  before:-z-10  before:blur-xl "
 				variants={variants}
-				initial="initial"
+				// initial="initial"
 				whileInView="animate"
 			>
 				{/* ICONS WRAPPER */}
@@ -315,7 +331,8 @@ const Contact = () => {
 								</p>
 							</div> */}
 							<div className="mt-5  max-w-[350px] mx-auto">
-								<form action="">
+								{/* onSubmit={sendEmail} */}
+								<form ref={formRef}>
 									<div className="relative mt-6">
 										<input
 											type="name"
@@ -363,6 +380,20 @@ const Contact = () => {
 										<Button className="" type="red">
 											Send
 										</Button>
+									</div>
+									<div className="mt-6 grid justify-items-center">
+										{/* {error && (
+											<p className="text-primary-red">
+												I am sorry, but there was an error processing your
+												request. Please try again later
+											</p>
+										)}
+										{success && (
+											<p className="text-green-500">
+												Thank you for contacting me. Your email has been sent!
+												Please allow some time for me to respond :)
+											</p>
+										)} */}
 									</div>
 								</form>
 							</div>

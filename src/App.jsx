@@ -29,7 +29,7 @@ function App() {
 			<section className="padding relative" id="Contact">
 				<Contact />
 			</section>
-			<footer className="padding" id="Footer">
+			<footer className="padding relative about-gradient" id="Footer">
 				<Footer />
 			</footer>
 		</div>
