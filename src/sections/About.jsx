@@ -4,7 +4,7 @@ import { aboutInfo } from "../constants";
 
 const About = () => {
 	return (
-		<div className="max-container my-36 h-screen about-gradient">
+		<div className="max-container about-gradient before: before:-translate-x-[15%] before:-translate-y-[30%] lg:before:-translate-x-[40%] relative about-gradient">
 			<div className="aspect-square inline-block border-2 border-white rounded-md md:hidden">
 				<h1 className="section-header relative z-20 text-left align-middle p-4 ">
 					About <br /> Me

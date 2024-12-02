@@ -8,7 +8,7 @@ const Nav = () => {
 			<nav className="flex justify-between items-center max-container ">
 				<Sidebar />
 				<motion.span
-					className="max-lg:hidden leading-normal text-lg text-"
+					className="max-lg:hidden leading-normal text-lg ms-8"
 					initial={{ opacity: 0, scale: 0.5 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 0.5 }}
@@ -37,6 +37,7 @@ const Nav = () => {
 										// 	},
 										// }}
 										size={20}
+										className="scale-75 sm:scale-100"
 									/>
 								</a>
 							</li>

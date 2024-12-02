@@ -49,7 +49,7 @@ const Contact = () => {
 	};
 	return (
 		<div
-			className="max-container bg-primary-dark rounded-2xl lines-gradient"
+			className="max-container bg-primary-dark rounded-2xl sm:lines-gradient"
 			ref={ref}
 		>
 			<h1 className="section-header relative z-20 text-left align-middle p-4 ">
@@ -57,7 +57,7 @@ const Contact = () => {
 			</h1>
 			<motion.div
 				ref={ref}
-				className=" flex-1 mx-auto   z-20 bg-primary-dark text-gray flex justify-evenly lg:gap-32 xl:gap-48 flex-wrap items-center gap-20 px-5 py-10 mt-10 lg:mt-20 relative before:-bottom-20 before:-top-20 before:-left-20 before:-right-20 before:absolute before:bg-primary-dark  before:-z-10  before:blur-xl "
+				className=" flex-1 mx-auto   z-20 bg-primary-dark text-gray flex justify-evenly lg:gap-32 xl:gap-48 flex-wrap items-center gap-20 px-5 py-10 mt-10 lg:mt-20 relative md:before:-bottom-20 md:before:-top-20 md:before:-left-20 md:before:-right-20 md:before:absolute md:before:bg-primary-dark  md:before:-z-10  md:before:blur-xl "
 				variants={variants}
 				// initial="initial"
 				whileInView="animate"

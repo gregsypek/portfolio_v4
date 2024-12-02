@@ -46,7 +46,9 @@ const Sidebar = () => {
 			>
 				<Links />
 			</motion.div>
-			<ToggleButton setOpen={setOpen} />
+			<div className="-mt-8">
+				<ToggleButton setOpen={setOpen} />
+			</div>
 		</motion.div>
 	);
 };

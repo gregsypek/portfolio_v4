@@ -38,23 +38,23 @@ const Hero = () => {
 	return (
 		<section
 			id="home"
-			className="  flex flex-row justify-start  gap-10 max-container overflow-hidden relative overflow:hidden "
+			className="flex flex-row justify-start gap-10 max-container overflow-hidden relative overflow:hidden padding-x"
 		>
 			<div
-				className="h-screen w-4/6 sm:w-3/5 md:w-3/5 lg:w-4/5 xl:w-3/4 flex ps-4 md:ps-8 xl:ps-0 flex-col lg:pt-[180px] pt-[1.5rem]  xl:relative "
+				className=" pt-[12vh] sm:justify-start -translate-y-12 sm:translate-y-0 gap-4 w-4/6 sm:w-3/5 md:w-3/5 lg:w-4/5 xl:w-3/4 flex  flex-col lg:pt-[180px] xl:relative "
 				style={{
 					//navbar height is 75px
 					height: "calc(100dvh - 75px)",
 				}}
 			>
-				<h1 className=" text-[48px] sm:text-[60px] md:text-[80px] sm:leading-none xl:text-8xl  leading-10  font-bold bg-text-gradient bg-clip-text text-transparent relative z-20  text-left  align-middle">
+				<h1 className="text-[48px] sm:text-[60px] md:text-[80px] sm:leading-none xl:text-8xl  leading-10 font-bold bg-text-gradient bg-clip-text text-transparent relative z-20  text-left align-middle">
 					Web Developer & <br /> Content Creator
 				</h1>
-				<p className="text-xs lg:text-lg text-dark-grey mt-[40px] md:text-base xl:mt-[86px] md:w-3/5  w-2/3 relative z-20 leading-tight text-left">
+				<p className="text-sm md:paragraph text-dark-grey mt-6 xl:mt-[86px] md:w-3/5  w-2/3 relative z-20 leading-tight text-left">
 					Hi, my name is Greg Sypek. I create and design web pages and projects
 					with attention to details and clarity.
 				</p>
-				<div className="mt-9 xl:mt-12 max-lg:flex-col flex flex-wrap gap-8  justify-start items-start relative z-10">
+				<div className="mt-6 xl:mt-12 max-lg:flex-col flex flex-wrap gap-8  justify-start items-start relative z-10">
 					<ScrollLink to="Projects" smooth={true} duration={300}>
 						<Button type="red" className="rounded-sm">
 							See the Latest Works
@@ -67,7 +67,7 @@ const Hero = () => {
 				</div>
 			</div>
 			<div
-				className=" absolute top-0 lg:top-18 tiny:translate-x-52 sm:translate-x-48 md:translate-x-48 xl:translate-x-0 translate-x-32 
+				className=" absolute top-0 lg:top-18 tiny:-translate-y-18 lg:-translate-y-24 tiny:translate-x-48 sm:translate-x-48 sm:scale-90 md:translate-x-48 xl:translate-x-0 translate-x-32 
 			   min-h-screen xl: -right-20   "
 			>
 				<img
@@ -80,7 +80,7 @@ const Hero = () => {
 				/>
 			</div>
 			<div
-				className="slidingText ms-4 lg:ms-0"
+				className="slidingText padding-x "
 				// variants={sliderVariants}
 				// initial="initial"
 				// animate="animate"
