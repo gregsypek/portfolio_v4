@@ -59,6 +59,10 @@
 		@apply px-4 md:px-8 lg:px-12;
 	}
 
+	.margin-y {
+		@apply my-8 md:my-12 lg:my-16;
+	}
+
 	.padding-y {
 		@apply sm:py-24 py-12 2xl:py-36;
 	}
@@ -82,11 +86,14 @@
 		@apply text-4xl md:text-[68px] lg:text-8xl font-extrabold  bg-text-gradient bg-clip-text text-transparent;
 	}
 
+	.section-title {
+		@apply font-inter leading-normal text-2xl lg:text-3xl;
+	}
 	.info-text {
 		@apply font-inter text-slate-gray text-lg leading-7;
 	}
 	.paragraph {
-		@apply font-inter text-base md:text-lg lg:text-xl mt-6;
+		@apply font-inter leading-normal text-sm md:text-lg lg:text-xl;
 	}
 	.about-gradient {
 		@apply before:absolute before:inset-0  before:bg-gradient2 before:w-full before:h-full before:bg-no-repeat before:bg-center before:bg-contain before:pointer-events-none before:z-10;

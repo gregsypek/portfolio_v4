@@ -8,7 +8,7 @@
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="96" result="effect1_foregroundBlur_2153_446"/>
 </filter>
-<radialGradient id="paint0_angular_2153_446" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(781.625 754.883) rotate(91.4175) scale(433.118 209.124)">
+<radialGradient id="paint0_angular_2153_446" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(850.625 811.883) rotate(179.4175) scale(395.118 209.124)">
 <stop offset="0.0882433" stop-color="#0A0C10"/>
 <stop offset="0.191683" stop-color="#0A0C10"/>
 <stop offset="0.328451" stop-color="#70333C"/>
