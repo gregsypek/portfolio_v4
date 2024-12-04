@@ -25,9 +25,9 @@ const About = () => {
 						{info.content}
 					</p>
 				))}
-				<div className=" col-start-6 row-start-6 col-span-5 flex justify-end mt-12 z-20 relative">
-					<ScrollLink to="Contact" smooth={true} duration={500}>
-						<Button type="blue" className="rounded-sm">
+				<div className=" col-start-6 row-start-6 col-span-5 flex justify-end mt-12 z-20 relative ">
+					<ScrollLink to="Contact" smooth={true} duration={500} className="">
+						<Button type="blue" className="rounded-sm ">
 							See the Latest Works
 						</Button>
 					</ScrollLink>

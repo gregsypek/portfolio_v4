@@ -26,12 +26,12 @@ function SkillBox({ box, onClick }) {
 	};
 	const rightContainerRef = useRef(null);
 	return (
-		<div className="flex flex-col gap-5 items-start relative p-6 md:p-14 z-10 ">
+		<div className="flex flex-col gap-5 items-start relative p-6 sm:px-6 md:px-8 z-10 ">
 			{/* bg-background-card */}
 			<div className="absolute h-auto md:w-[80%] lg:w-[85%] left-0 bottom-0 top-0 rounded-xl p z-10 bg-background-form "></div>
 			<div className="flex w-full  ">
-				<div className="flex flex-col gap-12 justify-start flex-1 font-bold relative z-20 ">
-					<p className="text-4xl self-start caption-top uppercase ">{name}</p>
+				<div className="flex flex-col lg:flex-row lg:justify-between justify-start flex-1 font-bold relative z-20 ">
+					<p className="text-3xl self-start caption-top uppercase">{name}</p>
 
 					<div className="relative flex items-center justify-center w-12 h-12 lg:w-16 lg:h-16 bg-light-grey text-black rounded-full text-sm lg:text-lg font-bold shadow-md">
 						{year}
@@ -42,12 +42,12 @@ function SkillBox({ box, onClick }) {
 					</div>
 				</div>
 			</div>
-			<div className="flex text-base gap-2 md:gap-20 ">
-				<div className="flex-1 text-sm md:text-lg text-gray leading-normal relative z-20 ">
+			<div className="flex flex-col sm:flex-row text-base gap-2 md:gap-20 ">
+				<div className="flex-1 order-2 sm:order-1 paragraph text-gray relative z-20 float-right">
 					{desc}
 				</div>
 				<div
-					className="  lg:grid gap-0 grid-cols-[120px_120px_120px] grid-rows-[50px_50px] relative z-20 "
+					className="lg:grid flex sm:flex-col flex-wrap sm:flex-nowrap  order-1 sm:order-2 gap-0 grid-cols-[120px_120px_120px] grid-rows-[50px_50px] relative z-20 "
 					ref={rightContainerRef}
 				>
 					{languages.map((lang) => {
@@ -60,7 +60,7 @@ function SkillBox({ box, onClick }) {
 								whileInView="animate"
 								key={lang.name}
 								className={`border && "border-${border} border-x" }
-								 m-2 flex justify-center rounded-md items-center  md:w-[120px] md:h-[50px] w-[120px] h-[50px] `}
+								 m-2 flex justify-center rounded-md items-center  md:w-[120px] md:h-[50px] w-[100px] h-[30px] `}
 								style={{
 									backgroundColor: background,
 									color: color,

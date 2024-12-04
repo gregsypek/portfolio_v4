@@ -20,6 +20,7 @@ export default {
 
 			colors: {
 				"primary-red": "#A41045",
+				"dark-red": "#630727",
 				"secondary-violet": "#892066",
 				"tertiary-blue": "#18457C",
 				"primary-dark": "#0A0C10",

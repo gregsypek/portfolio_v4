@@ -20,13 +20,7 @@ export const navSocialLinks = [
 	},
 ];
 
-export const navLinks = [
-	"Homepage",
-	"About",
-	"Projects",
-	"Experience",
-	"Contact",
-];
+export const navLinks = ["Home", "About", "Projects", "Experience", "Contact"];
 
 export const skills = ["React", "React Native", "Node", "Next", "Typescript"];
 
@@ -161,7 +155,7 @@ export const experience = [
 		year: "2023",
 		title: "React Native Developer",
 		name: "SOLVE-NET",
-		desc: "I played a crucial role in a development team, focusing on technologies like React, React Native, TypeScript, and Node.js. I enhanced an existing mobile app for the construction industry by adding features, optimizing functionality, and developing a Node.js program for language translation. My experience at SOLVE-NET enriched my skills in project development using tools like Redmine.",
+		desc: "I have experience working with technologies such as React, React Native, TypeScript, and Node.js. I enhanced an existing mobile app for the construction industry by adding features, optimizing functionality, and developing a Node.js program for language translation. My experience at SOLVE-NET enriched my skills in project development using tools like Redmine.",
 		languages: ["React", "React Native", "Typescript", "Node"],
 	},
 	{
@@ -180,4 +174,13 @@ export const experience = [
 		desc: "At the start of my freelance journey, I developed websites for my first clients, building the foundation for my web development skills.",
 		languages: ["JavaScript", "Scss", "Php"],
 	},
+];
+
+export const skillColors = [
+	{ background: "transparent", color: "#e7e4e4", border: "#e7e4e4" },
+	{ background: "#18457C", color: "#D2D2D2", border: "transparent" },
+	{ background: "#58324a", color: "#D2D2D2", border: "transparent" },
+	{ background: "transparent", color: "#e7e4e4", border: "transparent" },
+	{ background: "#5b6067", color: "black", border: "transparent" },
+	{ background: "#9b8595", color: "#0A0C10", border: "transparent" },
 ];

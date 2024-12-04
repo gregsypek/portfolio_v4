@@ -49,7 +49,7 @@ const Contact = () => {
 	};
 	return (
 		<div
-			className="max-container bg-primary-dark rounded-2xl sm:lines-gradient"
+			className="max-container bg-primary-dark rounded-2xl flex flex-col gap-12 border-red-100"
 			ref={ref}
 		>
 			<h1 className="section-header relative z-20 text-left align-middle p-4 ">
@@ -57,14 +57,14 @@ const Contact = () => {
 			</h1>
 			<motion.div
 				ref={ref}
-				className=" flex-1 mx-auto   z-20 bg-primary-dark text-gray flex justify-evenly lg:gap-32 xl:gap-48 flex-wrap items-center gap-20 px-5 py-10 mt-10 lg:mt-20 relative md:before:-bottom-20 md:before:-top-20 md:before:-left-20 md:before:-right-20 md:before:absolute md:before:bg-primary-dark  md:before:-z-10  md:before:blur-xl "
+				className=" flex-1 mx-auto z-20 bg-primary-dark text-gray flex justify-evenly lg:gap-32 xl:gap-48 flex-wrap items-center gap-12 sm:gap-20  mt-10 lg:mt-20 relative md:before:-bottom-20 md:before:-top-20 md:before:-left-20 md:before:absolute md:before:bg-primary-dark md:before:-z-10 md:before:blur-xl "
 				variants={variants}
 				// initial="initial"
 				whileInView="animate"
 			>
 				{/* ICONS WRAPPER */}
 				<motion.div
-					className="flex flex-col gap-5 lg:gap-10 max-w-[450px] min-w-[280px] "
+					className="flex flex-col gap-2 lg:gap-10 max-w-[450px] min-w-[280px] "
 					variants={variants}
 				>
 					<motion.div variants={variants}>
@@ -80,7 +80,7 @@ const Contact = () => {
 									height="80px"
 									viewBox="0 0 32 32"
 									xmlns="http://www.w3.org/2000/svg"
-									className="max-sm:w-2/3 max-sm:h-2/3"
+									className="w-2/3 h-2/3 md:w-full md:h-full"
 								>
 									<defs></defs>
 
@@ -159,7 +159,7 @@ const Contact = () => {
 									height="80px"
 									viewBox="0 0 32 32"
 									xmlns="http://www.w3.org/2000/svg"
-									className="max-sm:w-2/3 max-sm:h-2/3"
+									className="w-2/3 h-2/3 md:w-full md:h-full"
 								>
 									<defs></defs>
 
@@ -249,7 +249,7 @@ const Contact = () => {
 									height="80px"
 									viewBox="0 0 32 32"
 									xmlns="http://www.w3.org/2000/svg"
-									className="max-sm:w-2/3 max-sm:h-2/3"
+									className="w-2/3 h-2/3 md:w-full md:h-full"
 								>
 									<defs></defs>
 
@@ -320,10 +320,10 @@ const Contact = () => {
 						</div>
 					</motion.div>
 				</motion.div>
-				<div className="flex flex-1 min-w-[330px] max-w-[450px]">
+				<div className="flex sm:flex-1 sm:min-w-[330px] w-[90vw] max-w-[400px] sm:max-w-[450px] px-4">
 					{/* FORM */}
 
-					<div className="flex flex-1 min-h-full flex-col justify-start   mx-auto lg:px-8 bg-background-form rounded-xl py-6 px-12 max-w-[450px]">
+					<div className="flex flex-1 min-h-full h-full flex-col justify-start mx-auto bg-background-form rounded-xl py-6 px-6 sm:px-6 lg:px-12 max-w-[450px]">
 						<div className="w-full">
 							{/* <div className="text-center">
 								<p className="mt-2 text-3xl text-gray mb-12">

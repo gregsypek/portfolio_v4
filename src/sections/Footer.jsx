@@ -2,7 +2,7 @@ import Button from "../components/Button";
 
 const Footer = () => {
 	return (
-		<div className="max-container   flex flex-wrap sm:flex-nowrap gap-5 ">
+		<div className="max-container flex flex-wrap sm:flex-nowrap gap-5 ">
 			<div className="">
 				<h1 className="section-header relative z-20 text-left align-middle p-4 ">
 					Reach Out For More?
@@ -25,11 +25,11 @@ const Footer = () => {
 					width="500"
 					height="800"
 					alt="Grzegorz Sypek"
-					className="object-contain relative z-10 h-2/3 md:h-full  mask-gradient-30 sm:-translate-y-1/4 scale-75 sm:scale-100"
+					className="object-contain relative z-10 h-2/3 md:h-full mask-gradient-30 -translate-y-20 md:-translate-y-1/4 lg:-translate-y-8 scale-75 md:scale-100"
 					loading="lazy"
 				/>
 			</div>
-			<div className="uppercase flex flex-col gap-10 self-center absolute sm:static z-20 bottom-20 ">
+			<div className="uppercase flex flex-col gap-10 self-center absolute sm:static z-20 bottom-40 group">
 				<Button type="empty">GET MY CV FROM THE BROWSER </Button>
 				<Button type="empty">GET MY CV AS PDF FILE </Button>
 			</div>

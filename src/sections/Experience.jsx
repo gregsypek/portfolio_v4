@@ -1,21 +1,12 @@
 import { useEffect, useState } from "react";
 
 import { useWindowSize } from "react-use";
-import { experience } from "../constants";
+import { experience, skillColors } from "../constants";
 import SkillBox from "../components/SkillBox";
 
 function Experience() {
 	const { width: windowWidth } = useWindowSize();
 	const [skillBoxes, setSkillBoxes] = useState([]);
-
-	const skillColors = [
-		{ background: "transparent", color: "#e7e4e4", border: "#e7e4e4" },
-		{ background: "#18457C", color: "#D2D2D2", border: "transparent" },
-		{ background: "#58324a", color: "#D2D2D2", border: "transparent" },
-		{ background: "transparent", color: "#e7e4e4", border: "transparent" },
-		{ background: "#5b6067", color: "black", border: "transparent" },
-		{ background: "#9b8595", color: "#0A0C10", border: "transparent" },
-	];
 
 	const getRandomColor = () => {
 		const randomIndex = Math.floor(Math.random() * skillColors.length);
@@ -100,22 +91,24 @@ function Experience() {
 	};
 
 	return (
-		<div className="max-container min-h-screen gap-8 grid h-auto mx-auto grid-rows-[150px_repeat(3,minmax(1fr,auto))]">
+		<div className="max-container min-h-screen grid h-auto mx-auto grid-rows-[150px_repeat(3,minmax(1fr,auto))]">
 			<div className=" ">
-				<h1 className="section-header mx-auto my-16 relative z-20">
+				<h1 className="section-header margin-y mx-auto relative z-20">
 					Experiences & Skills
 				</h1>
 			</div>
-			{skillBoxes.map((box) => {
-				return (
-					<SkillBox
-						box={box}
-						key={box.id}
-						onClick={() => handleSkillBoxClick(box)}
-						className="my-12 "
-					/>
-				);
-			})}
+			<div className="margin-y">
+				{skillBoxes.map((box) => {
+					return (
+						<SkillBox
+							box={box}
+							key={box.id}
+							onClick={() => handleSkillBoxClick(box)}
+							className="my-12 "
+						/>
+					);
+				})}
+			</div>
 		</div>
 	);
 }

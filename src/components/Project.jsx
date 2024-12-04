@@ -40,15 +40,20 @@ function Project({ project }) {
 	}, [handleKeyDown]);
 
 	return (
-		<div className="  hero-gradient relative before:rotate-180   before:translate-y-[20%] sm:before:-translate-y-[20%] sm:before:translate-x-[30%]  sm:before:scale-125 before:opacity-50">
+		<div className="hero-gradient relative before:rotate-180 before:translate-y-[20%] sm:before:scale-125 before:opacity-35">
 			<div className="flex flex-col lg:flex-row lg:justify-between margin-y relative z-20">
-				<div className="flex justify-between lg:hidden my-2  ">
-					<h4 className="section-title text-blue-grey uppercase  lg:mx-0 font-bold">
+				<div className="flex justify-between lg:hidden my-2">
+					<h4 className="section-title text-blue-grey uppercase lg:mx-0 font-bold">
 						{title}
 					</h4>
 					<a href={`${github}`} target="_blank" rel="noreferrer">
-						<span>
-							<LuGithub size={24} stroke="#18457C" />
+						<span className="group">
+							<LuGithub
+								size={24}
+								stroke="#e8cbcb"
+								strokeWidth="1"
+								className="group-hover:stroke-primary-red"
+							/>
 						</span>
 					</a>
 				</div>
@@ -86,8 +91,13 @@ function Project({ project }) {
 								{title}
 							</h4>
 							<a href={`${github}`} target="_blank" rel="noreferrer">
-								<span>
-									<LuGithub size={32} stroke="#18457C" strokeWidth="1" />
+								<span className="group">
+									<LuGithub
+										size={32}
+										stroke="#e8cbcb"
+										strokeWidth="1"
+										className="group-hover:stroke-primary-red"
+									/>
 								</span>
 							</a>
 						</div>
