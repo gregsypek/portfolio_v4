@@ -30,7 +30,7 @@ function SkillBox({ box, onClick }) {
 			{/* bg-background-card */}
 			<div className="absolute h-auto md:w-[80%] lg:w-[85%] left-0 bottom-0 top-0 rounded-xl p z-10 bg-background-form "></div>
 			<div className="flex w-full  ">
-				<div className="flex flex-col lg:flex-row lg:justify-between justify-start flex-1 font-bold relative z-20 ">
+				<div className="flex  flex-row justify-between sm:mr-8 md:mr-12 lg:mr-6 flex-1 font-bold relative z-20 ">
 					<p className="text-3xl self-start caption-top uppercase">{name}</p>
 
 					<div className="relative flex items-center justify-center w-12 h-12 lg:w-16 lg:h-16 bg-light-grey text-black rounded-full text-sm lg:text-lg font-bold shadow-md">
@@ -60,7 +60,7 @@ function SkillBox({ box, onClick }) {
 								whileInView="animate"
 								key={lang.name}
 								className={`border && "border-${border} border-x" }
-								 m-2 flex justify-center rounded-md items-center  md:w-[120px] md:h-[50px] w-[100px] h-[30px] hover:cursor-pointer`}
+								 m-2 text-xs md:text-base flex justify-center rounded-md items-center  md:w-[120px] md:h-[50px] w-[100px] h-[30px] hover:cursor-pointer`}
 								style={{
 									backgroundColor: background,
 									color: color,

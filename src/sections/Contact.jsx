@@ -1,7 +1,7 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Button from "../components/Button";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 const variants = {
 	initial: {
@@ -18,31 +18,32 @@ const variants = {
 	},
 };
 
-// const publicKey = process.env.REACT_APP_PUBLIC_KEY;
-// const serviceId = process.env.REACT_APP_SERVICE_ID;
-// const templateId = process.env.REACT_APP_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+const serviceId = import.meta.env.VITE_APP_SERVICE_ID;
+const templateId = import.meta.env.VITE_APP_TEMPLATE_ID;
 
 const Contact = () => {
 	const ref = useRef();
+
 	const numberRef = useRef();
 
 	const isInView = useInView(ref, { margin: "-100px" });
 	const formRef = useRef();
-	// const [error, setError] = useState(false);
-	// const [success, setSuccess] = useState(false);
+	const [error, setError] = useState(false);
+	const [success, setSuccess] = useState(false);
 
-	// const sendEmail = (e) => {
-	// 	e.preventDefault();
+	const sendEmail = (e) => {
+		e.preventDefault();
 
-	// 	emailjs.sendForm(publicKey, serviceId, templateId).then(
-	// 		() => {
-	// 			setSuccess(true);
-	// 		},
-	// 		() => {
-	// 			setError(true);
-	// 		}
-	// 	);
-	// };
+		emailjs.sendForm(publicKey, templateId, formRef.current, serviceId).then(
+			() => {
+				setSuccess(true);
+			},
+			(error) => {
+				setError(true);
+			}
+		);
+	};
 
 	const showNumber = () => {
 		numberRef.current.innerText = "+48 504522440";
@@ -57,6 +58,7 @@ const Contact = () => {
 			</h1>
 			<motion.div
 				ref={ref}
+				onSubmit={sendEmail}
 				className=" flex-1 mx-auto z-20 bg-primary-dark text-gray flex justify-evenly lg:gap-32 xl:gap-48 flex-wrap items-center gap-12 sm:gap-20  mt-10 lg:mt-20 relative md:before:-bottom-20 md:before:-top-20 md:before:-left-20 md:before:absolute md:before:bg-primary-dark md:before:-z-10 md:before:blur-xl "
 				variants={variants}
 				// initial="initial"
@@ -332,10 +334,11 @@ const Contact = () => {
 							</div> */}
 							<div className="mt-5  max-w-[350px] mx-auto">
 								{/* onSubmit={sendEmail} */}
-								<form ref={formRef}>
+								<form ref={formRef} onSubmit={sendEmail}>
 									<div className="relative mt-6">
 										<input
 											type="name"
+											name="name"
 											className="peer w-full py-4 px-2 bg-transparent border-b-2 placeholder:text-gray focus:outline-none focus:ring-1 focus:ring-gray focus:ring-offset-1 focus:ring-offset-transparent focus:border-transparent focus:rounded-sm"
 											placeholder="Name"
 											aria-label="Name"
@@ -347,6 +350,7 @@ const Contact = () => {
 									<div className="relative mt-6">
 										<input
 											type="email"
+											name="email"
 											autoComplete="email"
 											className="peer w-full py-4 px-2 bg-transparent border-b-2 placeholder:text-gray focus:outline-none focus:ring-1 focus:ring-gray focus:ring-offset-1 focus:ring-offset-transparent focus:border-transparent focus:rounded-sm"
 											placeholder="Email"
@@ -382,7 +386,7 @@ const Contact = () => {
 										</Button>
 									</div>
 									<div className="mt-6 grid justify-items-center">
-										{/* {error && (
+										{error && (
 											<p className="text-primary-red">
 												I am sorry, but there was an error processing your
 												request. Please try again later
@@ -393,7 +397,7 @@ const Contact = () => {
 												Thank you for contacting me. Your email has been sent!
 												Please allow some time for me to respond :)
 											</p>
-										)} */}
+										)}
 									</div>
 								</form>
 							</div>
