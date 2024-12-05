@@ -8,14 +8,14 @@ function Button({ disabled, children, to, type, onClick }) {
 	const styles = {
 		red:
 			normal +
-			"text-light-grey bg-primary-red hover:bg-dark-red hover:border-dark-red focus:ring-secondary-violet focus:ring border-primary-red ",
+			"text-light-grey bg-primary-red hover:bg-dark-red border-[3px] hover:border-light-red  focus:ring border-primary-red ",
 		blue:
 			normal +
-			"text-light-grey bg-tertiary-blue hover:bg-gray hover:border-gray hover:text-primary-red focus:ring-secondary-violet focus:ring border-tertiary-blue ",
+			"text-light-grey bg-tertiary-blue border-[3px] hover:border-light-blue  focus:ring border-tertiary-blue ",
 
 		empty:
 			normal +
-			"border-light-dark text-light-grey hover:border-primary-red hover:text-white focus:ring-text-white focus:ring ",
+			"border-light-dark text-light-grey hover:border-pink-grey hover:text-white focus:ring-text-white focus:ring border-[3px]",
 	};
 
 	// Sprawdzamy, czy link jest zewnętrzny

@@ -43,7 +43,7 @@ function SkillBox({ box, onClick }) {
 				</div>
 			</div>
 			<div className="flex flex-col sm:flex-row text-base gap-2 md:gap-20 ">
-				<div className="flex-1 order-2 sm:order-1 paragraph text-gray relative z-20 float-right">
+				<div className="flex-1 order-2 sm:order-1 paragraph text-gray relative z-20">
 					{desc}
 				</div>
 				<div
@@ -60,7 +60,7 @@ function SkillBox({ box, onClick }) {
 								whileInView="animate"
 								key={lang.name}
 								className={`border && "border-${border} border-x" }
-								 m-2 flex justify-center rounded-md items-center  md:w-[120px] md:h-[50px] w-[100px] h-[30px] `}
+								 m-2 flex justify-center rounded-md items-center  md:w-[120px] md:h-[50px] w-[100px] h-[30px] hover:cursor-pointer`}
 								style={{
 									backgroundColor: background,
 									color: color,
@@ -71,7 +71,6 @@ function SkillBox({ box, onClick }) {
 									flexDirection: "column",
 									paddingBlock: "5px",
 									transition: "all 0.6s ease-in-out",
-									hover: "pointer",
 								}}
 								onClick={handleSkillBoxClick}
 							>

@@ -9,14 +9,33 @@ const Footer = () => {
 				</h1>
 				<p className="p-4 text-gray relative z-20  ">
 					I am available on &nbsp;
-					<a href="" className="border-b">
+					<a
+						href="https://twitter.com/gregsypek"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="border-b text-pink-grey hover:text-pink-200"
+					>
 						X
 					</a>
 					&nbsp;and&nbsp;
-					<a href="" className="border-b">
+					<a
+						href="https://www.linkedin.com/in/grzegorz-sypek-47472a194/"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="border-b text-pink-grey hover:text-pink-200"
+					>
 						Linkedin.
 					</a>
-					&nbsp;You can also check my CV
+					&nbsp;You can also check my CV or visit my&nbsp;
+					<a
+						href="https://github.com/gregsypek"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="border-b text-pink-grey hover:text-pink-200"
+					>
+						Github
+					</a>
+					&nbsp;account.
 				</p>
 			</div>
 			<div className="self-start ">
@@ -29,9 +48,21 @@ const Footer = () => {
 					loading="lazy"
 				/>
 			</div>
-			<div className="uppercase flex flex-col gap-10 self-center absolute sm:static z-20 bottom-40 group">
-				<Button type="empty">GET MY CV FROM THE BROWSER </Button>
-				<Button type="empty">GET MY CV AS PDF FILE </Button>
+			<div className="uppercase flex flex-col gap-10 self-center absolute sm:static z-20 bottom-40">
+				<a
+					href="/cv/CV_GRZEGORZ_SYPEK_P_2024.pdf"
+					download="CV_GRZEGORZ_SYPEK_P_2024.pdf"
+					rel="noopener noreferrer"
+				>
+					<Button type="empty">GET MY CV AS PDF FILE </Button>
+				</a>
+				<a
+					href="https://gregsypek.github.io/CV"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Button type="empty">GET MY CV FROM THE BROWSER </Button>
+				</a>
 			</div>
 		</div>
 	);
