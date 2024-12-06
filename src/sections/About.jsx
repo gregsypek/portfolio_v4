@@ -1,12 +1,28 @@
 import { Link as ScrollLink } from "react-scroll";
 import Button from "../components/Button";
+import { motion } from "framer-motion";
 import { aboutInfo } from "../constants";
+
+const textVariants = {
+	initial: {
+		x: -200,
+		opacity: 0,
+	},
+	animate: {
+		x: 0,
+		opacity: 1,
+		transition: {
+			duration: 1,
+			staggerChildren: 0.1,
+		},
+	},
+};
 
 const About = () => {
 	return (
 		<div className="max-container before:-translate-x-[15%] before:-translate-y-[30%] lg:before:-translate-x-[40%] relative about-gradient">
-			<div className="aspect-square inline-block border-2 border-white rounded-md md:hidden">
-				<h1 className="section-header relative z-20 text-left align-middle p-4 ">
+			<div className="inline-block border-2 border-white rounded-md aspect-square md:hidden">
+				<h1 className="relative z-20 p-4 text-left align-middle section-header ">
 					About <br /> Me
 				</h1>
 			</div>
@@ -18,15 +34,22 @@ const About = () => {
 					</h1>
 				</div>
 				{/* SQUARE 2  */}
-				<div className="about-square2  "></div>
+				<div className="about-square2 "></div>
 
 				{aboutInfo.map((info) => (
-					<p key={info.id} className={`${info.className} text-dark-grey`}>
+					<motion.p
+						variants={textVariants}
+						initial="initial"
+						animate="animate"
+						key={info.id}
+						className={`${info.className} text-dark-grey`}
+					>
 						{info.content}
-					</p>
+					</motion.p>
 				))}
-				<div className=" col-start-6 row-start-6 col-span-5 flex justify-end mt-12 z-20 relative ">
-					<ScrollLink to="Contact" smooth={true} duration={500} className="">
+
+				<div className="relative z-20 flex justify-end col-span-5 col-start-6 row-start-6 mt-12 ">
+					<ScrollLink to="Projects" smooth={true} duration={500}>
 						<Button type="blue" className="rounded-sm ">
 							See the Latest Works
 						</Button>
