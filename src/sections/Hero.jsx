@@ -33,7 +33,7 @@ const Hero = () => {
 	return (
 		<section
 			id="home"
-			className="flex flex-row justify-start gap-10 max-container overflow-hidden relative overflow:hidden padding-x"
+			className="relative flex flex-row justify-start gap-10 overflow-hidden max-container overflow:hidden padding-x"
 		>
 			<motion.div
 				className=" pt-[12vh] sm:justify-start -translate-y-12 sm:translate-y-0 gap-4 w-4/6 sm:w-3/5 md:w-3/5 lg:w-4/5 xl:w-3/4 flex  flex-col lg:pt-[180px] xl:relative "
@@ -53,7 +53,7 @@ const Hero = () => {
 					nostrum labore delectus at repellendus soluta qui non asperiores
 					aspernatur voluptas.
 				</motion.p>
-				<motion.div className="mt-6 xl:mt-12 max-lg:flex-col flex flex-wrap gap-8  justify-start items-start relative z-20">
+				<motion.div className="relative z-20 flex flex-wrap items-start justify-start gap-8 mt-6 xl:mt-12 max-lg:flex-col">
 					<ScrollLink
 						to="Projects"
 						smooth={true}
@@ -70,21 +70,18 @@ const Hero = () => {
 					</ScrollLink>
 				</motion.div>
 			</motion.div>
-			<div
-				className=" absolute top-0 lg:top-18 tiny:-translate-y-18 lg:-translate-y-24 tiny:translate-x-48 sm:translate-x-48 sm:scale-90 md:translate-x-48 xl:translate-x-0 translate-x-32 
-			   min-h-screen xl: -right-20   "
-			>
+			<div className="absolute top-0 min-h-screen translate-x-32 lg:top-18 tiny:-translate-y-18 lg:-translate-y-24 tiny:translate-x-48 sm:translate-x-48 sm:scale-90 md:translate-x-48 xl:translate-x-0 xl: -right-20">
 				<img
 					src="/hero.png"
 					alt="Grzegorz"
 					width={820}
 					height={1000}
-					className="object-cover relative z-10 md:h-full mask-gradient-30"
+					className="relative z-10 object-cover md:h-full mask-gradient-30"
 					loading="lazy"
 				/>
 			</div>
 			<div
-				className="slidingText padding-x z-0"
+				className="z-0 slidingText padding-x"
 				style={{ pointerEvents: "none" }} ///no interactions needed -  hide behind buttons/
 			>
 				<SlidingText skills={skills} currentSkillIndex={currentSkillIndex} />
