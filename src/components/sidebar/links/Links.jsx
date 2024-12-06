@@ -25,7 +25,7 @@ const itemVariants = {
 	},
 };
 
-const Links = () => {
+const Links = ({ setOpen }) => {
 	return (
 		<motion.div
 			className="absolute w-full h-full flex flex-col items-center justify-center gap-5"
@@ -39,6 +39,7 @@ const Links = () => {
 					variants={itemVariants}
 					whileHover={{ scale: 1.1 }}
 					whileTap={{ scale: 0.95 }}
+					onClick={() => setOpen((prev) => !prev)}
 				>
 					{item}
 				</motion.a>
