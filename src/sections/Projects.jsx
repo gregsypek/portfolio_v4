@@ -2,7 +2,7 @@ import { projects } from "../constants";
 import Project from "../components/Project";
 const Projects = () => {
 	return (
-		<div className="max-container margin-y  h-full flex flex-col relative z-20">
+		<div className="relative z-20 flex flex-col h-full max-container margin-y">
 			<h1 className="section-header ">My Websites & Apps</h1>
 			{projects.map((project, index) => (
 				<div key={project.id}>
@@ -13,7 +13,7 @@ const Projects = () => {
 				</div>
 			))}
 		</div>
-	);
+	);	
 };
 
 export default Projects;

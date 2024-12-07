@@ -48,10 +48,9 @@ const Hero = () => {
 				<motion.h1 className="text-[48px] sm:text-[60px] md:text-[80px] sm:leading-none xl:text-8xl  leading-10 font-bold bg-text-gradient bg-clip-text text-transparent relative z-20  text-left align-middle">
 					Web Developer & <br /> Content Creator
 				</motion.h1>
-				<motion.p className="text-sm md:paragraph text-dark-grey mt-6 xl:mt-[86px] md:w-3/5  w-2/3 relative z-20 leading-tight text-left">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
-					nostrum labore delectus at repellendus soluta qui non asperiores
-					aspernatur voluptas.
+				<motion.p className="text-sm md:paragraph text-dark-grey mt-6 xl:mt-[86px] md:w-3/5 w-2/3 relative z-20 leading-tight text-left">
+					Hi, my name is Grzegorz Sypek, I design, create web pages and projects
+					with attention to details and clarity.
 				</motion.p>
 				<motion.div className="relative z-20 flex flex-wrap items-start justify-start gap-8 mt-6 xl:mt-12 max-lg:flex-col">
 					<ScrollLink
@@ -81,7 +80,7 @@ const Hero = () => {
 				/>
 			</div>
 			<div
-				className="z-0 slidingText padding-x"
+				className="z-10 slidingText padding-x"
 				style={{ pointerEvents: "none" }} ///no interactions needed -  hide behind buttons/
 			>
 				<SlidingText skills={skills} currentSkillIndex={currentSkillIndex} />

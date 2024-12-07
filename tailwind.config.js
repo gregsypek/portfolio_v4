@@ -23,7 +23,7 @@ export default {
 				"light-red": "#c36a89",
 				"secondary-violet": "#892066",
 				"tertiary-blue": "#18457C",
-				"light-blue": "#2471ce",
+				"light-blue": "#186cd3",
 				"primary-dark": "#0A0C10",
 				"light-dark": "#424345",
 				"dark-grey": "#7d7e80",
@@ -52,6 +52,8 @@ export default {
 					"linear-gradient(to bottom, hsl(296, 31%, 17%,1) 20%, rgba(94, 63, 96, 0) 100%, rgba(10, 12, 16,100%) 100%)",
 				"background-form":
 					"linear-gradient(to bottom, rgb(88, 50, 74, 40%) 0%, rgb(94, 63, 96, 0) 100%, rgb(10, 12, 16, 1) 100%)",
+				"red-gradient": "linear-gradient(180deg, #b0335e, #A41045)",
+				"blue-gradient": "linear-gradient(180deg, #2471ce, #18457C)",
 			},
 
 			stroke: {

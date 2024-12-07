@@ -142,7 +142,7 @@ function Project({ project }) {
 										size={32}
 										stroke="#e8cbcb"
 										strokeWidth="1"
-										className="group-hover:stroke-primary-red"
+										className="group-hover:stroke-white"
 									/>
 								</span>
 							</a>
