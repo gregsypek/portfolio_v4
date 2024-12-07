@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 function Button({ disabled, children, to, type, onClick }) {
 	const base =
