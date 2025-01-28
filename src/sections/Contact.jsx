@@ -31,6 +31,7 @@ const Contact = () => {
 	const formRef = useRef();
 	const [error, setError] = useState(false);
 	const [success, setSuccess] = useState(false);
+	const [displayError, setDisplayError] = useState("");
 
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -41,6 +42,7 @@ const Contact = () => {
 			},
 			(error) => {
 				setError(true);
+				setDisplayError(error);
 			}
 		);
 	};
@@ -50,16 +52,15 @@ const Contact = () => {
 	};
 	return (
 		<div
-			className="max-container bg-primary-dark rounded-2xl flex flex-col gap-12 border-red-100"
+			className="flex flex-col gap-12 border-red-100 max-container bg-primary-dark rounded-2xl"
 			ref={ref}
 		>
-			<h1 className="section-header relative z-20 text-left align-middle p-4 ">
+			<h1 className="relative z-20 p-4 text-left align-middle section-header ">
 				Let&#39;s Connect
 			</h1>
 			<motion.div
 				ref={ref}
-				onSubmit={sendEmail}
-				className=" flex-1 mx-auto z-20 bg-primary-dark text-gray flex justify-evenly lg:gap-32 xl:gap-48 flex-wrap items-center gap-12 sm:gap-20  mt-10 lg:mt-20 relative md:before:-bottom-20 md:before:-top-20 md:before:-left-20 md:before:absolute md:before:bg-primary-dark md:before:-z-10 md:before:blur-xl "
+				className="relative z-20 flex flex-wrap items-center flex-1 gap-12 mx-auto mt-10 bg-primary-dark text-gray justify-evenly lg:gap-32 xl:gap-48 sm:gap-20 lg:mt-20 md:before:-bottom-20 md:before:-top-20 md:before:-left-20 md:before:absolute md:before:bg-primary-dark md:before:-z-10 md:before:blur-xl"
 				variants={variants}
 				// initial="initial"
 				whileInView="animate"
@@ -71,7 +72,7 @@ const Contact = () => {
 				>
 					<motion.div variants={variants}>
 						{/* <h2>Mail</h2> */}
-						<div className="flex justify-center md:justify-start items-center gap-5">
+						<div className="flex items-center justify-center gap-5 md:justify-start">
 							<motion.div
 								initial={{ opacity: 0 }}
 								whileInView={{ opacity: 1 }}
@@ -150,7 +151,7 @@ const Contact = () => {
 					<motion.div variants={variants}>
 						{/* <h2>Address</h2> */}
 
-						<div className="flex justify-center md:justify-start items-center gap-5 ">
+						<div className="flex items-center justify-center gap-5 md:justify-start ">
 							<motion.div
 								initial={{ opacity: 0 }}
 								whileInView={{ opacity: 1 }}
@@ -240,7 +241,7 @@ const Contact = () => {
 					<motion.div variants={variants}>
 						{/* <h2>Phone</h2> */}
 
-						<div className="flex justify-center md:justify-start items-center gap-5">
+						<div className="flex items-center justify-center gap-5 md:justify-start">
 							<motion.div
 								initial={{ opacity: 0 }}
 								whileInView={{ opacity: 1 }}
@@ -328,18 +329,17 @@ const Contact = () => {
 					<div className="flex flex-1 min-h-full h-full flex-col justify-start mx-auto bg-background-form rounded-xl py-6 px-6 sm:px-6 lg:px-12 max-w-[450px]">
 						<div className="w-full">
 							{/* <div className="text-center">
-								<p className="mt-2 text-3xl text-gray mb-12">
+								<p className="mt-2 mb-12 text-3xl text-gray">
 									Send me a message
 								</p>
 							</div> */}
 							<div className="mt-5  max-w-[350px] mx-auto">
-								{/* onSubmit={sendEmail} */}
 								<form ref={formRef} onSubmit={sendEmail}>
 									<div className="relative mt-6">
 										<input
 											type="name"
 											name="name"
-											className="peer w-full py-4 px-2 bg-transparent border-b-2 placeholder:text-gray focus:outline-none focus:ring-1 focus:ring-gray focus:ring-offset-1 focus:ring-offset-transparent focus:border-transparent focus:rounded-sm"
+											className="w-full px-2 py-4 bg-transparent border-b-2 peer placeholder:text-gray focus:outline-none focus:ring-1 focus:ring-gray focus:ring-offset-1 focus:ring-offset-transparent focus:border-transparent focus:rounded-sm"
 											placeholder="Name"
 											aria-label="Name"
 										/>
@@ -352,7 +352,7 @@ const Contact = () => {
 											type="email"
 											name="email"
 											autoComplete="email"
-											className="peer w-full py-4 px-2 bg-transparent border-b-2 placeholder:text-gray focus:outline-none focus:ring-1 focus:ring-gray focus:ring-offset-1 focus:ring-offset-transparent focus:border-transparent focus:rounded-sm"
+											className="w-full px-2 py-4 bg-transparent border-b-2 peer placeholder:text-gray focus:outline-none focus:ring-1 focus:ring-gray focus:ring-offset-1 focus:ring-offset-transparent focus:border-transparent focus:rounded-sm"
 											placeholder="Email"
 											aria-label="Email"
 										/>
@@ -362,7 +362,7 @@ const Contact = () => {
 									</div>
 									<div className="relative mt-6">
 										<textarea
-											className="peer w-full py-4 px-2 bg-transparent border-b-2 placeholder:text-gray focus:outline-none focus:ring-1 focus:ring-gray focus:ring-offset-1 focus:ring-offset-transparent focus:border-transparent focus:rounded-sm"
+											className="w-full px-2 py-4 bg-transparent border-b-2 peer placeholder:text-gray focus:outline-none focus:ring-1 focus:ring-gray focus:ring-offset-1 focus:ring-offset-transparent focus:border-transparent focus:rounded-sm"
 											placeholder="Message"
 											name="message"
 											rows="5"
@@ -377,19 +377,20 @@ const Contact = () => {
 										</label>
 									</div>
 
-									{/* <button className="mt-10 w-full rounded-md bg-slate-600 py-2 px-5 text-white">
+									{/* <button className="w-full px-5 py-2 mt-10 text-white rounded-md bg-slate-600">
 										Send
 									</button> */}
-									<div className="mt-10 w-full flex justify-end">
+									<div className="flex justify-end w-full mt-10">
 										<Button className="" type="red">
 											Send
 										</Button>
 									</div>
-									<div className="mt-6 grid justify-items-center">
+									<div className="grid mt-6 justify-items-center">
 										{error && (
 											<p className="text-primary-red">
-												I am sorry, but there was an error processing your
-												request. Please try again later
+												{/* I am sorry, but there was an error processing your
+												request. Please try again later */}
+												{displayError}
 											</p>
 										)}
 										{success && (
