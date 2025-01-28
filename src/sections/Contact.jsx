@@ -31,7 +31,6 @@ const Contact = () => {
 	const formRef = useRef();
 	const [error, setError] = useState(false);
 	const [success, setSuccess] = useState(false);
-	const [displayError, setDisplayError] = useState("");
 
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -41,8 +40,8 @@ const Contact = () => {
 				setSuccess(true);
 			},
 			(error) => {
+				console.log("🚀 ~ sendEmail ~ error:", error);
 				setError(true);
-				setDisplayError(error);
 			}
 		);
 	};
@@ -388,9 +387,8 @@ const Contact = () => {
 									<div className="grid mt-6 justify-items-center">
 										{error && (
 											<p className="text-primary-red">
-												{/* I am sorry, but there was an error processing your
-												request. Please try again later */}
-												{displayError}
+												I am sorry, but there was an error processing your
+												request. Please try again later
 											</p>
 										)}
 										{success && (
