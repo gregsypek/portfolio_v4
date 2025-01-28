@@ -47,7 +47,7 @@ const Sidebar = () => {
 				<Links setOpen={setOpen} />
 			</motion.div>
 			<div className="-mt-8">
-				<ToggleButton setOpen={setOpen} />
+				<ToggleButton setOpen={setOpen} open={open} />
 			</div>
 		</motion.div>
 	);

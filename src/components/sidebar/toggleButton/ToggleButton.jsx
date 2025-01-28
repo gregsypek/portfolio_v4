@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
-const ToggleButton = ({ setOpen }) => {
+const ToggleButton = ({ setOpen, open }) => {
 	return (
-		<motion.button
-			className="fixed z-[1000] p-2 border
-			border-white"
+		<button
+			className={`fixed z-[1000] p-2 border rounded-sm
+			border-white ${open ? "bg-transparent" : "bg-[#0A0B10]"}`}
 			onClick={() => setOpen((prev) => !prev)}
 		>
 			<svg width="23" height="23" viewBox="0 0 23 23">
@@ -37,7 +37,7 @@ const ToggleButton = ({ setOpen }) => {
 					}}
 				/>
 			</svg>
-		</motion.button>
+		</button>
 	);
 };
 
