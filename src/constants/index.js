@@ -9,7 +9,7 @@ export const navSocialLinks = [
 		icon: BsTwitterX,
 	},
 	{
-		href: "https://www.linkedin.com/in/grzegorz-sypek-47472a194/",
+		href: "https://www.linkedin.com/in/grzegorz-sypek/",
 		label: "linkedin",
 		icon: LuLinkedin,
 	},

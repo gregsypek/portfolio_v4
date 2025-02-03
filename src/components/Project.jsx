@@ -179,7 +179,7 @@ function Project({ project }) {
 				</div>
 				<div className="border-[2px] border-pink-grey rounded-xl p-1 md:p-5 order-1 lg:order-none h-[350px] sm:h-[450px] lg:h-[550px] transition-all ">
 					<img
-						className="object-contain w-full h-full hover:cursor-pointer hover:scale-y-105 hover:object-cover rounded-xl hover:rounded-xl duration-50"
+						className="object-cover w-full h-full rounded-xl hover:rounded-xl duration-50"
 						src={images[currentImageIndex]}
 						alt="project screen "
 					/>

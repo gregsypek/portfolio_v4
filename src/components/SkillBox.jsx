@@ -26,24 +26,24 @@ function SkillBox({ box, onClick }) {
 	};
 	const rightContainerRef = useRef(null);
 	return (
-		<div className="flex flex-col gap-5 items-start relative p-6 sm:px-6 md:px-8 z-10 ">
+		<div className="relative z-10 flex flex-col items-start gap-5 p-6 sm:px-6 md:px-8 ">
 			{/* bg-background-card */}
-			<div className="absolute h-auto md:w-[80%] lg:w-[85%] left-0 bottom-0 top-0 rounded-xl p z-10 bg-background-form "></div>
-			<div className="flex w-full  ">
-				<div className="flex  flex-row justify-between sm:mr-8 md:mr-12 lg:mr-6 flex-1 font-bold relative z-20 ">
-					<p className="text-3xl self-start caption-top uppercase">{name}</p>
+			<div className="absolute h-auto md:w-[80%] lg:w-[85%] left-0 bottom-0 top-0 rounded-xl p z-10"></div>
+			<div className="flex w-full ">
+				<div className="relative z-20 flex flex-row justify-between flex-1 font-bold sm:mr-8 md:mr-12 lg:mr-6 ">
+					<p className="self-start text-3xl uppercase caption-top">{name}</p>
 
-					<div className="relative flex items-center justify-center w-12 h-12 lg:w-16 lg:h-16 bg-light-grey text-black rounded-full text-sm lg:text-lg font-bold shadow-md">
+					<div className="relative flex items-center justify-center w-12 h-12 text-sm font-bold text-black rounded-full shadow-md lg:w-16 lg:h-16 bg-light-grey lg:text-lg">
 						{year}
 						{/* First ring */}
-						<div className="absolute inset-0 animate-pulse rounded-full bg-gradient-to-r from-white to-blue-grey opacity-50 blur-md"></div>
+						<div className="absolute inset-0 rounded-full opacity-50 animate-pulse bg-gradient-to-r from-white to-blue-grey blur-md"></div>
 						{/* Second ring */}
-						<div className="absolute inset-0 animate-ping rounded-full bg-gradient-to-r from-blue-400 to-blue-grey opacity-30 blur-lg"></div>
+						<div className="absolute inset-0 rounded-full animate-ping bg-gradient-to-r from-blue-400 to-blue-grey opacity-30 blur-lg"></div>
 					</div>
 				</div>
 			</div>
-			<div className="flex flex-col sm:flex-row text-base gap-2 md:gap-20 ">
-				<div className="flex-1 order-2 sm:order-1 paragraph text-gray relative z-20">
+			<div className="flex flex-col gap-2 text-base sm:flex-row md:gap-20 ">
+				<div className="relative z-20 flex-1 order-2 sm:order-1 paragraph text-gray">
 					{desc}
 				</div>
 				<div
