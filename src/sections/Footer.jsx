@@ -2,12 +2,12 @@ import Button from "../components/Button";
 
 const Footer = () => {
 	return (
-		<div className="max-container flex flex-wrap sm:flex-nowrap gap-5 ">
+		<div className="flex flex-wrap gap-5 max-container sm:flex-nowrap ">
 			<div className="">
-				<h1 className="section-header relative z-20 text-left align-middle p-4 ">
+				<h1 className="relative z-20 p-4 text-left align-middle section-header ">
 					Reach Out For More?
 				</h1>
-				<p className="p-4 text-gray relative z-20  ">
+				<p className="relative z-20 p-4 text-gray ">
 					I am available on &nbsp;
 					<a
 						href="https://twitter.com/gregsypek"
@@ -19,7 +19,7 @@ const Footer = () => {
 					</a>
 					&nbsp;and&nbsp;
 					<a
-						href="https://www.linkedin.com/in/grzegorz-sypek-47472a194/"
+						href="https://www.linkedin.com/in/grzegorz-sypek/"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="border-b text-pink-grey hover:text-pink-200"
@@ -44,11 +44,11 @@ const Footer = () => {
 					width="500"
 					height="800"
 					alt="Grzegorz Sypek"
-					className="object-contain relative z-10 h-2/3 md:h-full mask-gradient-30 -translate-y-20 md:-translate-y-1/4 lg:-translate-y-8 scale-75 md:scale-100"
+					className="relative z-10 object-contain scale-75 -translate-y-20 h-2/3 md:h-full mask-gradient-30 md:-translate-y-1/4 lg:-translate-y-8 md:scale-100"
 					loading="lazy"
 				/>
 			</div>
-			<div className="uppercase flex flex-col gap-10 self-center absolute sm:static z-20 bottom-40">
+			<div className="absolute z-20 flex flex-col self-center gap-10 uppercase sm:static bottom-40">
 				<a
 					href="/cv/CV_GRZEGORZ_SYPEK_P_2024.pdf"
 					download="CV_GRZEGORZ_SYPEK_P_2024.pdf"
