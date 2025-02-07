@@ -4,11 +4,11 @@ import Sidebar from "./sidebar/Sidebar";
 
 const Nav = () => {
 	return (
-		<header className="padding-x py-[24px] w-full bg-transparent font-inter">
-			<nav className="flex justify-between items-center max-container ">
+		<header className="padding-x py-[24px] w-full bg-transparent font-inter ">
+			<nav className="flex items-center justify-between max-container ">
 				<Sidebar />
 				<motion.span
-					className="max-lg:hidden leading-normal text-lg ms-8"
+					className="text-lg leading-normal max-lg:hidden ms-8"
 					initial={{ opacity: 0, scale: 0.5 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 0.5 }}
@@ -16,7 +16,7 @@ const Nav = () => {
 					GRZEGORZ SYPEK
 				</motion.span>
 
-				<ul className="flex-1 flex justify-end items-center gap-8 ">
+				<ul className="flex items-center justify-end flex-1 gap-8 ">
 					{navSocialLinks.map((item) => {
 						const Icon = item.icon;
 						return (

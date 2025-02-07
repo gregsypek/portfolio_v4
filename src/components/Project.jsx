@@ -103,7 +103,7 @@ function Project({ project }) {
 								<motion.li key={tag} variants={tagItemVariants}>
 									{tag}
 								</motion.li>
-						  ))
+							))
 						: null}
 				</motion.ul>
 				<div className="hidden gap-5 mx-auto my-auto lg:flex lg:mx-0 ">

@@ -6,12 +6,14 @@ import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
 
+import React from "react";
+
 function App() {
 	return (
-		<div className="bg-primary-dark text-white relative">
+		<div className="relative text-white bg-primary-dark">
 			<section id="Home" className="pb-16 md:pb-20 lg:pb-24 ">
-				<div className="relative hero-gradient max-h-screen ">
-					<Nav className="absolute z-20" />
+				<div className="max-h-screen relati3ve hero-gradient">
+					<Nav />
 					<main className="relative z-20">
 						<Hero />
 						{/* Gradient effect to "skills"  for better visibility */}
@@ -28,10 +30,10 @@ function App() {
 			<section className="section-half-y section-x" id="Experience">
 				<Experience />
 			</section>
-			<section className="section relative py-8 min-h-screen" id="Contact">
+			<section className="relative min-h-screen py-8 section" id="Contact">
 				<Contact />
 			</section>
-			<footer className="section relative about-gradient" id="Footer">
+			<footer className="relative section about-gradient" id="Footer">
 				<Footer />
 			</footer>
 		</div>
