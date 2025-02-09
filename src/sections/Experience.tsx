@@ -3,17 +3,23 @@ import { useCallback, useEffect, useState } from "react";
 import { useWindowSize } from "react-use";
 import { experience, skillColors } from "../constants";
 import SkillBox from "../components/SkillBox";
+import {
+	ColorType,
+	ExperienceType,
+	LanguageBoxType,
+	SkillBoxType,
+} from "../types/types";
 
 function Experience() {
 	const { width: windowWidth } = useWindowSize();
-	const [skillBoxes, setSkillBoxes] = useState([]);
+	const [skillBoxes, setSkillBoxes] = useState<SkillBoxType[]>([]);
 
-	const getRandomColor = () => {
+	const getRandomColor = (): ColorType => {
 		const randomIndex = Math.floor(Math.random() * skillColors.length);
 		return skillColors[randomIndex];
 	};
 
-	const getRandomColumn = (maxColumn) => {
+	const getRandomColumn = (maxColumn: number): number => {
 		const randomNumber = Math.random();
 		const columns = Array.from({ length: maxColumn }, (_, index) => index + 1);
 
@@ -21,12 +27,12 @@ function Experience() {
 		return columns[randomIndex];
 	};
 
-	const colorSet = useCallback((skills) => {
+	const colorSet = useCallback((skills: string[]): ColorType[] => {
 		return skills.map(() => getRandomColor());
 	}, []);
 
 	const skillSet = useCallback(
-		(skills) => {
+		(skills: string[]): LanguageBoxType[] => {
 			const languageColors = colorSet(skills);
 
 			const test = skills.map((name, langIndex) => {
@@ -46,10 +52,10 @@ function Experience() {
 	);
 
 	const newBoxSkill = useCallback(
-		(work) => {
+		(work: ExperienceType): SkillBoxType => {
 			const { name, desc, year, title, languages, id } = work;
 
-			const boxSkill = {
+			return {
 				id,
 				languages: skillSet(languages),
 				name,
@@ -57,44 +63,40 @@ function Experience() {
 				year,
 				title,
 			};
-
-			return boxSkill;
 		},
 		[skillSet]
 	);
 
 	useEffect(() => {
-		const newSkillBoxes = [];
-		experience.map((work) => {
-			newSkillBoxes.push(newBoxSkill(work, work.id));
-		});
-		if (newSkillBoxes.length) {
-			setSkillBoxes(newSkillBoxes);
-		}
+		const newSkillBoxes: SkillBoxType[] = experience.map(newBoxSkill);
+		setSkillBoxes(newSkillBoxes);
 	}, [newBoxSkill]);
 
-	const handleSkillBoxClick = (clickedBox) => {
-		const languageColors = colorSet(clickedBox.languages);
+	const handleSkillBoxClick = useCallback(
+		(clickedBox: SkillBoxType) => {
+			const languageColors = colorSet(
+				clickedBox.languages.map((lang) => lang.name)
+			);
 
-		const updatedSkillBoxes = skillBoxes.map((box) => {
-			if (box.id === clickedBox.id) {
-				return {
-					...clickedBox,
-					languages: clickedBox.languages.map((l, index) => ({
-						...l,
-						colors: languageColors[index],
-						column:
-							windowWidth > 1000 ? getRandomColumn(3) : getRandomColumn(2),
-						row: index + 1,
-					})),
-				};
-			} else {
-				return box;
-			}
-		});
+			const updatedSkillBoxes: SkillBoxType[] = skillBoxes.map((box) =>
+				box.id === clickedBox.id
+					? {
+							...clickedBox,
+							languages: clickedBox.languages.map((l, index) => ({
+								...l,
+								colors: languageColors[index],
+								column:
+									windowWidth > 1000 ? getRandomColumn(3) : getRandomColumn(2),
+								row: index + 1,
+							})),
+						}
+					: box
+			);
 
-		setSkillBoxes(updatedSkillBoxes);
-	};
+			setSkillBoxes(updatedSkillBoxes);
+		},
+		[colorSet, skillBoxes, windowWidth]
+	);
 
 	return (
 		<div className="max-container min-h-screen grid h-auto mx-auto grid-rows-[150px_repeat(3,minmax(1fr,auto))]">
@@ -110,7 +112,7 @@ function Experience() {
 							box={box}
 							key={box.id}
 							onClick={() => handleSkillBoxClick(box)}
-							className="my-12 "
+							//  "
 						/>
 					);
 				})}

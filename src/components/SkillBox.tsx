@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
-
+import { ExperienceType, SkillBoxType } from "../types/types";
 const skillsVariants = {
 	initial: {
 		opacity: 0,
@@ -18,15 +18,20 @@ const skillsVariants = {
 	},
 };
 
-function SkillBox({ box, onClick }) {
+function SkillBox({
+	box,
+	onClick,
+}: {
+	box: Partial<SkillBoxType>;
+	onClick: (box: Partial<SkillBoxType>) => void;
+}) {
 	const { year, name, languages, desc } = box;
 	const handleSkillBoxClick = () => {
-		// Dodaj tutaj dodatkową logikę lub przekazanie informacji związanej z kliknięciem
 		onClick(box);
 	};
 	const rightContainerRef = useRef(null);
 	return (
-		<div className="relative z-10 flex flex-col items-start gap-5 p-6 sm:px-6 md:px-8 ">
+		<div className="relative z-10 flex flex-col items-start gap-5 p-6 sm:px-6 md:px-8 my-12">
 			{/* bg-background-card */}
 			<div className="absolute h-auto md:w-[80%] lg:w-[85%] left-0 bottom-0 top-0 rounded-xl p z-10"></div>
 			<div className="flex w-full ">
@@ -50,7 +55,7 @@ function SkillBox({ box, onClick }) {
 					className="lg:grid flex sm:flex-col flex-wrap sm:flex-nowrap  order-1 sm:order-2 gap-0 grid-cols-[120px_120px_120px] grid-rows-[50px_50px] relative z-20 "
 					ref={rightContainerRef}
 				>
-					{languages.map((lang) => {
+					{languages?.map((lang) => {
 						const { background, color, border } = lang.colors;
 
 						return (

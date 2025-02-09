@@ -1,7 +1,7 @@
 import { BsTwitterX } from "react-icons/bs";
 import { LuLinkedin } from "react-icons/lu";
 import { LuGithub } from "react-icons/lu";
-import { ProjectType } from"../types/types"
+import { ExperienceType, ProjectType } from"../types/types"
 
 export const navSocialLinks = [
 	{
@@ -112,6 +112,8 @@ export const projects: ProjectType[] = [
 		desc: "I designed and developed the website for Schody Zaliński using WordPress. This project involved creating a custom logo, crafting the content, and designing the entire layout. The site showcases a range of wooden staircases, highlighting both modern and classic designs. Key features include detailed product descriptions, high-quality images, and a user-friendly interface that ensures a seamless browsing experience. The focus was on blending aesthetic appeal with functionality to enhance user engagement and satisfaction.",
 		tags: ["Wordpress", "PHP", "MySQL", "Scss", "2024"],
 		live: "https://schodyzalinski.pl",
+		github: "https://github.com/gregsypek/carpentry2",
+
 	},
 	{
 		id: 5,
@@ -150,7 +152,7 @@ export const projects: ProjectType[] = [
 	},
 ];
 
-export const experience = [
+export const experience: ExperienceType[] = [
 	{
 		id: 0,
 		year: "2023",
