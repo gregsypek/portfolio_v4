@@ -25,10 +25,14 @@ const itemVariants = {
 	},
 };
 
-const Links = ({ setOpen }) => {
+const Links = ({
+	setOpen,
+}: {
+	setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
 	return (
 		<motion.div
-			className="absolute w-full h-full flex flex-col items-center justify-center gap-5"
+			className="absolute flex flex-col items-center justify-center w-full h-full gap-5"
 			variants={variants}
 		>
 			{navLinks.map((item) => (

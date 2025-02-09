@@ -28,7 +28,7 @@ function App() {
 			<section className="section-half-y section-x" id="Experience">
 				<Experience />
 			</section>
-			<section className="relative min-h-screen py-8  section" id="Contact">
+			<section className="relative min-h-screen py-8 section" id="Contact">
 				<Contact />
 			</section>
 			<footer className="relative section about-gradient" id="Footer">

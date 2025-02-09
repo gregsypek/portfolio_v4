@@ -59,7 +59,7 @@ const Hero = () => {
 						duration={300}
 						className="relative z-10"
 					>
-						<Button type="red" className="rounded-sm">
+						<Button type="red" >
 							See the Latest Works
 						</Button>
 					</ScrollLink>

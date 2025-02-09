@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
 
-const ToggleButton = ({ setOpen, open }) => {
+const ToggleButton = ({
+	setOpen,
+	open,
+}: {
+	setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+	open: boolean;
+}) => {
 	return (
 		<button
 			className={`fixed z-[1000] p-2 border rounded-sm

@@ -29,13 +29,11 @@ const variants = {
 	},
 };
 const Sidebar = () => {
-	const [open, setOpen] = useState(false);
+	const [open, setOpen] = useState<boolean>(false);
 
 	return (
 		<motion.div
-			className="flex flex-col items-center justify-center bg-white text-black
-			mr-8 max-lg:mr-0
-			"
+			className="flex flex-col items-center justify-center mr-8 text-black bg-white max-lg:mr-0 "
 			animate={open ? "open" : "closed"}
 		>
 			<motion.div
