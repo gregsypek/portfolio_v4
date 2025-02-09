@@ -21,6 +21,8 @@ export const navSocialLinks = [
 	},
 ];
 
+export  const CONTACT_NUMBER = "+48 504522440"
+
 export const navLinks = ["Home", "About", "Projects", "Experience", "Contact"];
 
 export const skills = ["React", "React Native", "Node", "Next", "Typescript"];

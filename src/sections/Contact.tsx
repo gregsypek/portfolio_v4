@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Button from "../components/Button";
 import emailjs from "@emailjs/browser";
+import { CONTACT_NUMBER } from "../constants";
 
 const variants = {
 	initial: {
@@ -23,31 +24,40 @@ const serviceId = import.meta.env.VITE_APP_SERVICE_ID;
 const templateId = import.meta.env.VITE_APP_TEMPLATE_ID;
 
 const Contact = () => {
-	const ref = useRef();
+	const ref = useRef<HTMLInputElement | null>(null);
+	const formRef = useRef<HTMLFormElement | null>(null);
 
-	const numberRef = useRef();
+	const numberRef = useRef<HTMLSpanElement>(null);
 
 	const isInView = useInView(ref, { margin: "-100px" });
-	const formRef = useRef();
 	const [error, setError] = useState(false);
 	const [success, setSuccess] = useState(false);
 
-	const sendEmail = (e) => {
+	const sendEmail = (e: { preventDefault: () => void }) => {
 		e.preventDefault();
 
-		emailjs.sendForm(publicKey, templateId, formRef.current, serviceId).then(
-			() => {
-				setSuccess(true);
-			},
-			(error) => {
-				console.log("🚀 ~ sendEmail ~ error:", error);
-				setError(true);
-			}
-		);
+		if (formRef.current) {
+			emailjs.sendForm(publicKey, templateId, formRef.current, serviceId).then(
+				() => {
+					setSuccess(true);
+				},
+				(error) => {
+					console.log("🚀 ~ sendEmail ~ error:", error);
+					setError(true);
+				}
+			);
+		} else {
+			console.error("Form reference is null");
+		}
 	};
 
 	const showNumber = () => {
-		numberRef.current.innerText = "+48 504522440";
+		// Ensure that numberRef.current is not null before setting innerText
+		if (numberRef.current) {
+			numberRef.current.innerText = CONTACT_NUMBER;
+		} else {
+			console.error("numberRef is not assigned to an element");
+		}
 	};
 	return (
 		<div
@@ -70,7 +80,6 @@ const Contact = () => {
 					variants={variants}
 				>
 					<motion.div variants={variants}>
-						{/* <h2>Mail</h2> */}
 						<div className="flex items-center justify-center gap-5 md:justify-start">
 							<motion.div
 								initial={{ opacity: 0 }}
@@ -95,7 +104,6 @@ const Contact = () => {
 											animate={isInView && { pathLength: 1 }}
 											transition={{ duration: 3 }}
 											d="M31.5,10.14,27.6,7.2a1,1,0,0,0-1.2,1.6L29.32,11,16.59,20.33a1,1,0,0,1-1.18,0L2.68,11,5.6,8.8A1,1,0,0,0,4.4,7.2L.5,10.14A1,1,0,0,0,0,11V29a3,3,0,0,0,3,3H29a3,3,0,0,0,3-3V11A1,1,0,0,0,31.5,10.14ZM30,29a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V13l12.23,9a3,3,0,0,0,3.54,0L30,13Z"
-											// style={{ fill: "#4d0606" }}
 										/>
 
 										<motion.path
@@ -106,7 +114,6 @@ const Contact = () => {
 											animate={isInView && { pathLength: 1 }}
 											transition={{ duration: 3 }}
 											d="M5,28a1,1,0,0,1-.71-.29,1,1,0,0,1,0-1.42l4-4a1,1,0,0,1,1.42,1.42l-4,4A1,1,0,0,1,5,28Z"
-											// style={{ fill: "#4d0606" }}
 										/>
 
 										<motion.path
@@ -117,7 +124,6 @@ const Contact = () => {
 											animate={isInView && { pathLength: 1 }}
 											transition={{ duration: 3 }}
 											d="M27,28a1,1,0,0,1-.71-.29l-4-4a1,1,0,0,1,1.42-1.42l4,4a1,1,0,0,1,0,1.42A1,1,0,0,1,27,28Z"
-											// style={{ fill: "#04009a" }}
 										/>
 
 										<motion.path
@@ -128,7 +134,6 @@ const Contact = () => {
 											animate={isInView && { pathLength: 1 }}
 											transition={{ duration: 3 }}
 											d="M16,16a8,8,0,1,1,8-8A8,8,0,0,1,16,16ZM16,2a6,6,0,1,0,6,6A6,6,0,0,0,16,2Z"
-											// style={{ fill: "#04009a" }}
 										/>
 
 										<motion.path
@@ -139,7 +144,6 @@ const Contact = () => {
 											animate={isInView && { pathLength: 1 }}
 											transition={{ duration: 3 }}
 											d="M19,7H17V5a1,1,0,0,0-2,0V7H13a1,1,0,0,0,0,2h2v2a1,1,0,0,0,2,0V9h2a1,1,0,0,0,0-2Z"
-											// style={{ fill: "#77acf1" }}
 										/>
 									</g>
 								</svg>
@@ -148,8 +152,6 @@ const Contact = () => {
 						</div>
 					</motion.div>
 					<motion.div variants={variants}>
-						{/* <h2>Address</h2> */}
-
 						<div className="flex items-center justify-center gap-5 md:justify-start ">
 							<motion.div
 								initial={{ opacity: 0 }}
@@ -174,7 +176,6 @@ const Contact = () => {
 											animate={isInView && { pathLength: 1 }}
 											transition={{ duration: 3 }}
 											d="M29,9H24a1,1,0,0,0,0,2h5a1,1,0,0,1,1,1V28a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V12a1,1,0,0,1,1-1h8a2,2,0,0,0,2,2h6a2,2,0,0,0,2-2V3a2,2,0,0,0-2-2H13a2,2,0,0,0-2,2V9H3a3,3,0,0,0-3,3V28a3,3,0,0,0,3,3H29a3,3,0,0,0,3-3V12A3,3,0,0,0,29,9ZM13,3h6v8H13Z"
-											// style={{ fill: "#04009a" }}
 										/>
 
 										<motion.path
@@ -185,7 +186,6 @@ const Contact = () => {
 											animate={isInView && { pathLength: 1 }}
 											transition={{ duration: 3 }}
 											d="M4,26a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1,5,5,0,0,0-2.207-4.145,4,4,0,1,0-5.586,0A5,5,0,0,0,4,26Zm3-7a2,2,0,1,1,2,2A2,2,0,0,1,7,19Zm2,4a3.006,3.006,0,0,1,2.829,2H6.171A3.006,3.006,0,0,1,9,23Z"
-											// style={{ fill: "#04009a" }}
 										/>
 
 										<motion.path
@@ -196,7 +196,6 @@ const Contact = () => {
 											animate={isInView && { pathLength: 1 }}
 											transition={{ duration: 3 }}
 											d="M25,25H19a1,1,0,0,1,0-2h6a1,1,0,0,1,0,2Z"
-											// style={{ fill: "#77acf1" }}
 										/>
 
 										<motion.path
@@ -207,7 +206,6 @@ const Contact = () => {
 											transition={{ duration: 3 }}
 											className="cls-2"
 											d="M27,21H19a1,1,0,0,1,0-2h8a1,1,0,0,1,0,2Z"
-											// style={{ fill: "#77acf1" }}
 										/>
 
 										<motion.path
@@ -218,7 +216,6 @@ const Contact = () => {
 											transition={{ duration: 3 }}
 											className="cls-2"
 											d="M27,17H19a1,1,0,0,1,0-2h8a1,1,0,0,1,0,2Z"
-											// style={{ fill: "#77acf1" }}
 										/>
 
 										<motion.path
@@ -229,7 +226,6 @@ const Contact = () => {
 											transition={{ duration: 3 }}
 											className="cls-2"
 											d="M16.02,9a1,1,0,0,1-.01-2h.01a1,1,0,0,1,0,2Z"
-											// style={{ fill: "#77acf1" }}
 										/>
 									</g>
 								</svg>
@@ -264,8 +260,6 @@ const Contact = () => {
 											animate={isInView && { pathLength: 1 }}
 											transition={{ duration: 3 }}
 											d="M18.21,32H7.79A4.8,4.8,0,0,1,3,27.21V4.79A4.8,4.8,0,0,1,7.79,0H18.21A4.8,4.8,0,0,1,23,4.79V5a1,1,0,0,1-2,0V4.79A2.79,2.79,0,0,0,18.21,2H7.79A2.79,2.79,0,0,0,5,4.79V27.21A2.79,2.79,0,0,0,7.79,30H18.21A2.79,2.79,0,0,0,21,27.21V27a1,1,0,0,1,2,0v.21A4.8,4.8,0,0,1,18.21,32Z"
-											// style={{ fill: "#0c0c1d" }}
-											// style={{ fill: "red" }}
 										/>
 
 										<motion.path
@@ -276,8 +270,6 @@ const Contact = () => {
 											transition={{ duration: 3 }}
 											className="cls-2"
 											d="M13,28a2,2,0,1,1,2-2A2,2,0,0,1,13,28Zm0-2Z"
-											// style={{ fill: "#0c0c1d" }}
-											// style={{ fill: "#77acf1" }}
 										/>
 
 										<motion.path
@@ -288,7 +280,6 @@ const Contact = () => {
 											transition={{ duration: 3 }}
 											className="cls-1"
 											d="M16,6H10a1,1,0,0,1,0-2h6a1,1,0,0,1,0,2Z"
-											// style={{ fill: "#8089e6" }}
 										/>
 
 										<motion.path
@@ -299,8 +290,6 @@ const Contact = () => {
 											transition={{ duration: 3 }}
 											className="cls-1"
 											d="M22,24a8,8,0,0,1-5.29-2H14a1,1,0,0,1-.89-1.45l1.19-2.39A7.93,7.93,0,0,1,14,16a8,8,0,1,1,8,8Zm-6.38-4h1.49a.94.94,0,0,1,.69.29A6,6,0,1,0,16,16a6.1,6.1,0,0,0,.32,1.93,1,1,0,0,1-.05.77Z"
-											// style={{ fill: "#8089e6" }}
-											// style={{ fill: "red" }}
 										/>
 										{/* dot */}
 										<path
@@ -327,11 +316,6 @@ const Contact = () => {
 
 					<div className="flex flex-1 min-h-full h-full flex-col justify-start mx-auto bg-background-form rounded-xl py-6 px-6 sm:px-6 lg:px-12 max-w-[450px]">
 						<div className="w-full">
-							{/* <div className="text-center">
-								<p className="mt-2 mb-12 text-3xl text-gray">
-									Send me a message
-								</p>
-							</div> */}
 							<div className="mt-5  max-w-[350px] mx-auto">
 								<form ref={formRef} onSubmit={sendEmail}>
 									<div className="relative mt-6">
@@ -341,8 +325,9 @@ const Contact = () => {
 											className="w-full px-2 py-4 bg-transparent border-b-2 peer placeholder:text-gray focus:outline-none focus:ring-1 focus:ring-gray focus:ring-offset-1 focus:ring-offset-transparent focus:border-transparent focus:rounded-sm"
 											placeholder="Name"
 											aria-label="Name"
+											id="name"
 										/>
-										<label htmlFor="name" name="name" className="label">
+										<label htmlFor="name" className="label">
 											NAME
 										</label>
 									</div>
@@ -354,8 +339,9 @@ const Contact = () => {
 											className="w-full px-2 py-4 bg-transparent border-b-2 peer placeholder:text-gray focus:outline-none focus:ring-1 focus:ring-gray focus:ring-offset-1 focus:ring-offset-transparent focus:border-transparent focus:rounded-sm"
 											placeholder="Email"
 											aria-label="Email"
+											id="email"
 										/>
-										<label htmlFor="email" name="email" className="label">
+										<label htmlFor="email" className="label">
 											EMAIL
 										</label>
 									</div>
@@ -364,25 +350,19 @@ const Contact = () => {
 											className="w-full px-2 py-4 bg-transparent border-b-2 peer placeholder:text-gray focus:outline-none focus:ring-1 focus:ring-gray focus:ring-offset-1 focus:ring-offset-transparent focus:border-transparent focus:rounded-sm"
 											placeholder="Message"
 											name="message"
-											rows="5"
+											rows={5}
 										/>
 										<label
 											htmlFor="message"
 											className="label"
-											rows="3"
 											aria-label="Message"
 										>
 											MESSAGE
 										</label>
 									</div>
 
-									{/* <button className="w-full px-5 py-2 mt-10 text-white rounded-md bg-slate-600">
-										Send
-									</button> */}
 									<div className="flex justify-end w-full mt-10">
-										<Button className="" type="red">
-											Send
-										</Button>
+										<Button type="red">Send</Button>
 									</div>
 									<div className="grid mt-6 justify-items-center">
 										{error && (
