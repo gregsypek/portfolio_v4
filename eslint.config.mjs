@@ -28,7 +28,7 @@ export default [
 			"plugin:react-hooks/recommended",
 			"standard",
 			"plugin:tailwindcss/recommended",
-			"prettier",
+			"prettier", // Dodaj Prettier
 			"plugin:@typescript-eslint/recommended"
 		)
 	),
@@ -36,6 +36,7 @@ export default [
 		plugins: {
 			"react-refresh": reactRefresh,
 			"@typescript-eslint": fixupPluginRules(typescriptEslint),
+			prettier: fixupPluginRules(require("eslint-plugin-prettier")), // Dodaj plugin Prettier
 		},
 
 		languageOptions: {
@@ -69,6 +70,14 @@ export default [
 			"@typescript-eslint/explicit-function-return-type": "off",
 			"@typescript-eslint/no-unused-vars": "warn",
 			"no-unused-vars": "off",
+
+			// Dodaj regułę Prettier
+			"prettier/prettier": [
+				"error",
+				{
+					endOfLine: "auto",
+				},
+			],
 		},
 	},
 ];

@@ -4,11 +4,11 @@ import Sidebar from "./sidebar/Sidebar";
 
 const Nav = () => {
 	return (
-		<header className="padding-x py-[24px] w-full bg-transparent font-inter ">
+		<header className="padding-x w-full bg-transparent py-[24px] font-inter ">
 			<nav className="flex items-center justify-between max-container ">
 				<Sidebar />
 				<motion.span
-					className="text-lg leading-normal max-lg:hidden ms-8"
+					className="text-lg leading-normal ms-8 max-lg:hidden"
 					initial={{ opacity: 0, scale: 0.5 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 0.5 }}
@@ -25,7 +25,7 @@ const Nav = () => {
 									href={item.href}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="hover:text-pink-grey relative z-[1000]"
+									className="relative z-[1000] hover:text-pink-grey"
 								>
 									<Icon size={20} className="scale-75 sm:scale-100" />
 								</a>
