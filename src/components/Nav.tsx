@@ -27,18 +27,7 @@ const Nav = () => {
 									rel="noopener noreferrer"
 									className="hover:text-pink-grey relative z-[1000]"
 								>
-									<Icon
-										// style={{
-										// 	width: "16px",
-										// 	height: "16px",
-										// 	"@media (min-width: 768px)": {
-										// 		width: "24px",
-										// 		height: "24px",
-										// 	},
-										// }}
-										size={20}
-										className="scale-75 sm:scale-100"
-									/>
+									<Icon size={20} className="scale-75 sm:scale-100" />
 								</a>
 							</li>
 						);

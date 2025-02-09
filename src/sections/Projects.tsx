@@ -1,10 +1,11 @@
 import { projects } from "../constants";
 import Project from "../components/Project";
+import { ProjectType } from "../types/types";
 const Projects = () => {
 	return (
 		<div className="relative z-20 flex flex-col h-full max-container margin-y">
 			<h1 className="section-header ">My Websites & Apps</h1>
-			{projects.map((project, index) => (
+			{projects.map((project: ProjectType, index: number) => (
 				<div key={project.id}>
 					<Project project={project} />
 					{index != projects.length - 1 && (
@@ -13,7 +14,7 @@ const Projects = () => {
 				</div>
 			))}
 		</div>
-	);	
+	);
 };
 
 export default Projects;

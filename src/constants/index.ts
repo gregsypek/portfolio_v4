@@ -1,6 +1,7 @@
 import { BsTwitterX } from "react-icons/bs";
 import { LuLinkedin } from "react-icons/lu";
 import { LuGithub } from "react-icons/lu";
+import { ProjectType } from"../types/types"
 
 export const navSocialLinks = [
 	{
@@ -48,7 +49,7 @@ export const aboutInfo = [
 	},
 ];
 
-export const projects = [
+export const projects: ProjectType[] = [
 	{
 		id: 1,
 		title: "Bakery",

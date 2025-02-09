@@ -1,8 +1,9 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import Button from "../components/Button";
+import { useCallback, useRef, useState } from "react";
+import Button from "./Button";
 import { LuArrowLeftCircle, LuGithub } from "react-icons/lu";
 import { LuArrowRightCircle } from "react-icons/lu";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, UseInViewOptions } from "framer-motion";
+import { ProjectType } from "../types/types";
 
 const tagVariants = {
 	initial: {
@@ -33,10 +34,16 @@ const tagItemVariants = {
 	},
 };
 
-function Project({ project }) {
-	const ref = useRef();
+interface ProjectProps {
+	project: ProjectType;
+}
+//  const Project: React.FC<ProjectProps> = ({ project }) => {
+const Project = ({ project }: ProjectProps) => {
+	// Explicitly specify that this ref will reference an Element or null
+	const ref = useRef<HTMLUListElement | null>(null);
 
-	const isInView = useInView(ref, { threshold: 0.5 });
+	const isInView = useInView(ref, { threshold: 0.5 } as UseInViewOptions);
+	// const isInView = useInView(ref, { once: true });
 
 	const { title, images, desc, tags, live, github } = project;
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -52,25 +59,6 @@ function Project({ project }) {
 	}, [images.length]);
 
 	const isSingleImage = images.length <= 1;
-
-	// const handleKeyDown = useCallback(
-	// 	(event) => {
-	// 		if (event.key === "ArrowLeft") {
-	// 			handlePrev();
-	// 		} else if (event.key === "ArrowRight") {
-	// 			handleNext();
-	// 		}
-	// 	},
-	// 	[handleNext, handlePrev]
-	// );
-
-	// useEffect(() => {
-	// 	window.addEventListener("keydown", handleKeyDown);
-
-	// 	return () => {
-	// 		window.removeEventListener("keydown", handleKeyDown);
-	// 	};
-	// }, [handleKeyDown]);
 
 	return (
 		<div className="hero-gradient relative before:rotate-180 before:translate-y-[20%] sm:before:scale-125 before:opacity-35">
@@ -119,7 +107,7 @@ function Project({ project }) {
 					</a>
 					<a
 						onClick={handlePrev}
-						disabled={isSingleImage}
+						// disabled={isSingleImage}
 						className="hover:cursor-pointer"
 					>
 						<div className="group">
@@ -191,6 +179,6 @@ function Project({ project }) {
 			</div>
 		</div>
 	);
-}
+};
 
 export default Project;
