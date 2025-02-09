@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { useWindowSize } from "react-use";
 import { experience, skillColors } from "../constants";
@@ -21,41 +21,47 @@ function Experience() {
 		return columns[randomIndex];
 	};
 
-	const colorSet = (skills) => {
+	const colorSet = useCallback((skills) => {
 		return skills.map(() => getRandomColor());
-	};
+	}, []);
 
-	const skillSet = (skills) => {
-		const languageColors = colorSet(skills);
+	const skillSet = useCallback(
+		(skills) => {
+			const languageColors = colorSet(skills);
 
-		const test = skills.map((name, langIndex) => {
-			return {
-				skillId: langIndex,
+			const test = skills.map((name, langIndex) => {
+				return {
+					skillId: langIndex,
+					name,
+					colors: languageColors[langIndex],
+					// backgroundColor: languageColors[langIndex].background,
+					column: windowWidth > 1000 ? getRandomColumn(3) : getRandomColumn(2),
+					row: langIndex + 1,
+					// border: lang.border,
+				};
+			});
+			return test;
+		},
+		[colorSet, windowWidth]
+	);
+
+	const newBoxSkill = useCallback(
+		(work) => {
+			const { name, desc, year, title, languages, id } = work;
+
+			const boxSkill = {
+				id,
+				languages: skillSet(languages),
 				name,
-				colors: languageColors[langIndex],
-				// backgroundColor: languageColors[langIndex].background,
-				column: windowWidth > 1000 ? getRandomColumn(3) : getRandomColumn(2),
-				row: langIndex + 1,
-				// border: lang.border,
+				desc,
+				year,
+				title,
 			};
-		});
-		return test;
-	};
 
-	const newBoxSkill = (work) => {
-		const { name, desc, year, title, languages, id } = work;
-
-		const boxSkill = {
-			id,
-			languages: skillSet(languages),
-			name,
-			desc,
-			year,
-			title,
-		};
-
-		return boxSkill;
-	};
+			return boxSkill;
+		},
+		[skillSet]
+	);
 
 	useEffect(() => {
 		const newSkillBoxes = [];
@@ -65,7 +71,7 @@ function Experience() {
 		if (newSkillBoxes.length) {
 			setSkillBoxes(newSkillBoxes);
 		}
-	}, []);
+	}, [newBoxSkill]);
 
 	const handleSkillBoxClick = (clickedBox) => {
 		const languageColors = colorSet(clickedBox.languages);
@@ -92,8 +98,8 @@ function Experience() {
 
 	return (
 		<div className="max-container min-h-screen grid h-auto mx-auto grid-rows-[150px_repeat(3,minmax(1fr,auto))]">
-			<div className=" ">
-				<h1 className="section-header margin-y mx-auto relative z-20">
+			<div>
+				<h1 className="relative z-20 mx-auto section-header margin-y">
 					Experiences & Skills
 				</h1>
 			</div>

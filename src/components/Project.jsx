@@ -107,7 +107,7 @@ function Project({ project }) {
 						: null}
 				</motion.ul>
 				<div className="hidden gap-5 mx-auto my-auto lg:flex lg:mx-0 ">
-					<Button onClick={handleNext}>
+					<a onClick={handleNext} className="hover:cursor-pointer">
 						<div className="group">
 							<LuArrowLeftCircle
 								size={32}
@@ -116,8 +116,12 @@ function Project({ project }) {
 								className="group-hover:stroke-[#e7e4e4]"
 							/>
 						</div>
-					</Button>
-					<Button onClick={handlePrev} disabled={isSingleImage}>
+					</a>
+					<a
+						onClick={handlePrev}
+						disabled={isSingleImage}
+						className="hover:cursor-pointer"
+					>
 						<div className="group">
 							<LuArrowRightCircle
 								size={32}
@@ -126,7 +130,7 @@ function Project({ project }) {
 								className="group-hover:stroke-[#e7e4e4]"
 							/>
 						</div>
-					</Button>
+					</a>
 				</div>
 			</div>
 			<div className=" flex flex-col lg:grid flex-1 lg:grid-cols-[1fr_2fr] gap-5 relative z-20">
