@@ -1,4 +1,10 @@
-function SlidingText({ skills, currentSkillIndex }) {
+function SlidingText({
+	skills,
+	currentSkillIndex,
+}: {
+	skills: string[];
+	currentSkillIndex: number;
+}) {
 	return (
 		<>
 			{skills.map((skill, index) => (

@@ -1,6 +1,6 @@
 import { Link as ScrollLink } from "react-scroll";
 import Button from "../components/Button";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, UseInViewOptions } from "framer-motion";
 import { aboutInfo } from "../constants";
 import { useRef } from "react";
 
@@ -20,9 +20,9 @@ const textVariants = {
 };
 
 const About = () => {
-	const ref = useRef();
+	const ref = useRef<HTMLInputElement | null>(null);
 
-	const isInView = useInView(ref, { threshold: 0.5 });
+	const isInView = useInView(ref, { threshold: 0.5 } as UseInViewOptions);
 
 	return (
 		<div className="max-container before:-translate-x-[15%] before:-translate-y-[30%] lg:before:-translate-x-[40%] relative about-gradient">
@@ -57,9 +57,7 @@ const About = () => {
 
 				<div className="relative z-20 flex justify-end col-span-5 col-start-6 row-start-6 mt-12 ">
 					<ScrollLink to="Projects" smooth={true} duration={500}>
-						<Button type="blue" className="rounded-sm ">
-							See the Latest Works
-						</Button>
+						<Button type="blue">See the Latest Works</Button>
 					</ScrollLink>
 				</div>
 			</div>
