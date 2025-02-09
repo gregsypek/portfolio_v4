@@ -21,13 +21,12 @@ const textVariants = {
 
 const About = () => {
 	const ref = useRef<HTMLInputElement | null>(null);
-
 	const isInView = useInView(ref, { threshold: 0.5 } as UseInViewOptions);
 
 	return (
 		<div className="max-container before:-translate-x-[15%] before:-translate-y-[30%] lg:before:-translate-x-[40%] relative about-gradient">
 			<div className="inline-block border-2 border-white rounded-md aspect-square md:hidden">
-				<h1 className="relative z-20 p-4 text-left align-middle section-header ">
+				<h1 className="relative z-20 p-4 text-left align-middle section-header">
 					About <br /> Me
 				</h1>
 			</div>
