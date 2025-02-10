@@ -95,7 +95,10 @@ const Project = ({ project }: ProjectProps) => {
             : null}
         </motion.ul>
         <div className="mx-auto my-auto hidden gap-5 lg:mx-0 lg:flex">
-          <a onClick={handleNext} className="hover:cursor-pointer">
+          <a
+            onClick={isSingleImage ? undefined : handleNext}
+            className={` ${isSingleImage ? 'opacity-50 hover:cursor-not-allowed' : 'hover:cursor-pointer'}`}
+          >
             <div className="group">
               <LuArrowLeftCircle
                 size={32}
@@ -106,9 +109,9 @@ const Project = ({ project }: ProjectProps) => {
             </div>
           </a>
           <a
-            onClick={handlePrev}
+            onClick={isSingleImage ? undefined : handlePrev}
             // disabled={isSingleImage}
-            className="hover:cursor-pointer"
+            className={` ${isSingleImage ? 'opacity-50 hover:cursor-not-allowed' : 'hover:cursor-pointer'}`}
           >
             <div className="group">
               <LuArrowRightCircle
@@ -140,7 +143,10 @@ const Project = ({ project }: ProjectProps) => {
               </a>
             </div>
             <div className="mx-auto my-auto flex gap-5 lg:mx-0 lg:hidden">
-              <Button onClick={handleNext}>
+              <a
+                onClick={isSingleImage ? undefined : handleNext}
+                className={` ${isSingleImage ? 'opacity-50 hover:cursor-not-allowed' : 'hover:cursor-pointer'}`}
+              >
                 <div className="group">
                   <LuArrowLeftCircle
                     size={32}
@@ -149,8 +155,11 @@ const Project = ({ project }: ProjectProps) => {
                     className="group-hover:stroke-[#e7e4e4]"
                   />
                 </div>
-              </Button>
-              <Button onClick={handlePrev} disabled={isSingleImage}>
+              </a>
+              <a
+                onClick={isSingleImage ? undefined : handlePrev}
+                className={` ${isSingleImage ? 'opacity-50 hover:cursor-not-allowed' : 'hover:cursor-pointer'}`}
+              >
                 <div className="group">
                   <LuArrowRightCircle
                     size={32}
@@ -159,7 +168,7 @@ const Project = ({ project }: ProjectProps) => {
                     className="group-hover:stroke-[#e7e4e4]"
                   />
                 </div>
-              </Button>
+              </a>
             </div>
             <p className="paragraph text-gray">{desc}</p>
           </div>
