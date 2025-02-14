@@ -99,7 +99,7 @@ function Experience() {
   );
 
   return (
-    <div className="max-container mx-auto grid h-auto min-h-screen grid-rows-[150px_repeat(3,minmax(1fr,auto))]">
+    <div className="max-container md:lines-gradient mx-auto grid h-auto min-h-screen grid-rows-[150px_repeat(3,minmax(1fr,auto))]">
       <div>
         <h1 className="section-header margin-y relative z-20 mx-auto">
           Experiences & Skills

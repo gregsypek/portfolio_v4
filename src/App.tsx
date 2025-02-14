@@ -25,7 +25,7 @@ function App() {
       <section className="section" id="Projects">
         <Projects />
       </section>
-      <section className="section-half-y section-x" id="Experience">
+      <section className="section-half-y section-x relative" id="Experience">
         <Experience />
       </section>
       <section className="section relative min-h-screen py-8" id="Contact">

@@ -48,7 +48,7 @@ function SkillBox({
         </div>
       </div>
       <div className="flex flex-col gap-2 text-base sm:flex-row md:gap-20">
-        <div className="paragraph relative z-20 order-2 flex-1 text-gray sm:order-1">
+        <div className="paragraph relative z-20 order-2 flex-1 p-5 text-gray sm:order-1 md:bg-primary-dark">
           {desc}
         </div>
         <div
