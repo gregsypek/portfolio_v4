@@ -78,7 +78,7 @@ export const projects: ProjectType[] = [
       'Prisma',
       'PostgreSQL',
       'Recharts',
-      '2026',
+      '2025',
     ],
     live: 'https://invest-guard-blue.vercel.app/',
     github: 'https://github.com/gregsypek/InvestGuard.git',
