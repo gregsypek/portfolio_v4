@@ -57,6 +57,7 @@ export const projects: ProjectType[] = [
     id: 1,
     title: 'InvestGuard',
     images: [
+      './projects/investGuard12.png',
       './projects/investGuard1.png',
       './projects/investGuard2.png',
       './projects/investGuard3.png',
@@ -68,7 +69,6 @@ export const projects: ProjectType[] = [
       './projects/investGuard9.png',
       './projects/investGuard10.png',
       './projects/investGuard11.png',
-      './projects/investGuard12.png',
     ],
     desc: 'Advanced Investment Portfolio & Treasury Bond Manager built for long-term investors. A core feature is its automated data parser, allowing users to seamlessly upload and process transaction reports directly from XTB and PKO BP (bonds). It features a dedicated engine for Polish government bonds (EDO, DOS) with real-time interest accrual tracking. The app also includes an Advanced Historical Simulation Engine with interactive Recharts, a Smart Sales System for accurate DCA and exit logic, and Multi-Portfolio Management. A standout feature is the "Magic Auto-Kalkulator," integrating Yahoo Finance and NBP APIs to instantly calculate historical multi-currency asset costs with dynamic spreads.',
     tags: [
