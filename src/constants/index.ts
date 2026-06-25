@@ -85,6 +85,27 @@ export const projects: ProjectType[] = [
   },
   {
     id: 2,
+    title: 'BakeryStore E-commerce',
+    images: [
+      './projects/bakerystore1.png',
+      './projects/bakerystore2.png',
+      './projects/bakerystore3.png',
+    ],
+    desc: 'A production-ready Full-Stack E-commerce Platform built to handle real-world business logic. Architected with Next.js 15 (App Router) and React 19, the application leverages modern Server Components and Server Actions for optimal performance. It features end-to-end type safety and data integrity using TypeScript, Zod schema validation, and Prisma ORM with PostgreSQL. Key functionalities include complex shopping cart state management, secure payment webhooks (Stripe & PayPal), cloud file storage (Uploadthing), and automated transactional emails (Resend). The platform also includes a robust custom admin dashboard with Recharts data visualization and secure authentication via Next-Auth v5.',
+    tags: [
+      'Next.js 15',
+      'React 19',
+      'TypeScript',
+      'Prisma',
+      'Stripe & PayPal',
+      'Zod',
+      '2026',
+    ],
+    live: 'https://bakerystore-zeta.vercel.app',
+    github: 'https://github.com/gregsypek/bakerystore',
+  },
+  {
+    id: 3,
     title: 'Pizzarella',
     images: [
       './projects/pizzarella1.png',
@@ -101,7 +122,7 @@ export const projects: ProjectType[] = [
     github: 'https://github.com/gregsypek/pizzarella',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Miodek_v4',
     images: [
       './projects/miodek1.png',
@@ -116,7 +137,7 @@ export const projects: ProjectType[] = [
     github: 'https://github.com/gregsypek/miodek4',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Schody Zaliński',
     images: [
       './projects/schody1.png',
@@ -132,7 +153,7 @@ export const projects: ProjectType[] = [
     github: 'https://github.com/gregsypek/carpentry2',
   },
   {
-    id: 5,
+    id: 6,
     title: 'MJurkowska',
     images: [
       './projects/mjurkowska1.png',
@@ -148,7 +169,7 @@ export const projects: ProjectType[] = [
     github: 'https://github.com/gregsypek/MJurkowska',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Ursus',
     images: [
       './projects/ursus1.png',
