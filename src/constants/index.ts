@@ -57,7 +57,7 @@ export const projects: ProjectType[] = [
     id: 1,
     title: 'InvestGuard',
     images: [
-      './projects/investGuard12.png',
+      './projects/investGuard0.png',
       './projects/investGuard1.png',
       './projects/investGuard2.png',
       './projects/investGuard3.png',
