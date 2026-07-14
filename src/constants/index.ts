@@ -32,21 +32,21 @@ export const aboutInfo = [
   {
     id: 1,
     content:
-      'I am a frontend developer with five years of programming experience.	I specialize in React, React Native, and Vue.js. Recently, I have			been working as an application programmer, utilizing React Native, React, and TypeScript to develop applications for engineers.					Additionally, I worked as a junior developer in Rzeszów on a large e-commerce application.',
+      'My coding journey started 8 years ago out of pure passion for technology. Today, with solid commercial experience gained through both team-based roles and independent freelance projects, I specialize in the React, Next.js, and TypeScript ecosystem. I build everything from mobile applications to scalable e-commerce platforms.',
     className:
       'md:col-start-5 md:col-span-6 md:row-start-1 md:row-span-1 about-paragraph',
   },
   {
     id: 2,
     content:
-      'I live in Mielec in Poland. I am a self-taught learner who is passionate about computers and coding. In my spare time, I enjoy listening to progressive rock, reading books, and	hiking in the mountains.',
+      'I focus on delivering real business value through clean code and smart architecture. Whether designing robust database schemas (Prisma, PostgreSQL) or building pixel-perfect UIs (Tailwind, SCSS), I always look at the bigger picture and value seamless team collaboration.',
     className:
       'md:col-start-6 md:col-span-5 md:row-start-3 md:row-span-1 about-paragraph ',
   },
   {
     id: 3,
     content:
-      'Currently I am looking for a job as a web developer. I am confident that my skills and dedication make me an asset to any team. I am			willing to cooperate and continue my adventure with IT and develop further in this direction.',
+      "Based in Mielec, Poland. When I'm not coding, my biggest passion is the stock market and financial analysis—an interest that directly inspired my full-stack SaaS project, InvestGuard. I also enjoy hiking mountain trails and am currently open to new career opportunities.",
     className:
       'md:col-start-6 md:col-span-5 md:row-start-5 md:row-span-1 about-paragraph',
   },
@@ -70,11 +70,11 @@ export const projects: ProjectType[] = [
       './projects/investGuard10.png',
       './projects/investGuard11.png',
     ],
-    desc: 'Advanced Investment Portfolio & Treasury Bond Manager built for long-term investors. A core feature is its automated data parser, allowing users to seamlessly upload and process transaction reports directly from XTB and PKO BP (bonds). It features a dedicated engine for Polish government bonds (EDO, DOS) with real-time interest accrual tracking. The app also includes an Advanced Historical Simulation Engine with interactive Recharts, a Smart Sales System for accurate DCA and exit logic, and Multi-Portfolio Management. A standout feature is the "Magic Auto-Kalkulator," integrating Yahoo Finance and NBP APIs to instantly calculate historical multi-currency asset costs with dynamic spreads.',
+    desc: 'Advanced SaaS platform for long-term investors. Architected a custom automated data parser for transaction reports (XTB, PKO BP) and a specialized engine for Polish government bonds with real-time interest tracking. Features include an interactive Historical Simulation Engine (Recharts), Multi-Portfolio Management, and a proprietary algorithm integrating Yahoo Finance and NBP APIs for dynamic multi-currency asset calculations.',
     tags: [
       'Next.js 15',
       'TypeScript',
-      'Tailwind CSS 4',
+      'Tailwind CSS',
       'Prisma',
       'PostgreSQL',
       'Recharts',
@@ -91,7 +91,7 @@ export const projects: ProjectType[] = [
       './projects/bakerystore2.png',
       './projects/bakerystore3.png',
     ],
-    desc: 'A production-ready Full-Stack E-commerce Platform built to handle real-world business logic. Architected with Next.js 15 (App Router) and React 19, the application leverages modern Server Components and Server Actions for optimal performance. It features end-to-end type safety and data integrity using TypeScript, Zod schema validation, and Prisma ORM with PostgreSQL. Key functionalities include complex shopping cart state management, secure payment webhooks (Stripe & PayPal), cloud file storage (Uploadthing), and automated transactional emails (Resend). The platform also includes a robust custom admin dashboard with Recharts data visualization and secure authentication via Next-Auth v5.',
+    desc: 'A production-ready Full-Stack E-commerce Platform built to handle real-world business logic. Architected with Next.js 15 (App Router) and React 19, utilizing Server Components and Server Actions. Features end-to-end type safety (TypeScript, Zod), robust database architecture (Prisma, PostgreSQL), secure payment webhooks (Stripe, PayPal), cloud storage, and a custom admin dashboard with advanced data visualization.',
     tags: [
       'Next.js 15',
       'React 19',
@@ -104,8 +104,28 @@ export const projects: ProjectType[] = [
     live: 'https://bakerystore-zeta.vercel.app',
     github: 'https://github.com/gregsypek/bakerystore',
   },
+
   {
     id: 3,
+    title: 'Schody Zaliński',
+    images: [
+      './projects/schody1.png',
+      './projects/schody2.png',
+      './projects/schody3.png',
+      './projects/schody4.png',
+      './projects/schody5.png',
+    ],
+    fullView: './projects/schody_full.png',
+    desc: 'Comprehensive end-to-end delivery of a modern business website for a manufacturer. Managed the entire project lifecycle, from initial UI/UX design and custom branding (logo) to custom WordPress theme development using PHP, MySQL, and SCSS. The platform is fully responsive, SEO-optimized, and features a scalable architecture designed to drive user engagement and business growth.',
+    tags: ['Wordpress', 'PHP', 'MySQL', 'Scss', '2024'],
+    live: 'https://schodyzalinski.pl',
+    github: 'https://github.com/gregsypek/carpentry2',
+  },
+];
+
+export const archivedProjects: ProjectType[] = [
+  {
+    id: 4,
     title: 'Pizzarella',
     images: [
       './projects/pizzarella1.png',
@@ -122,7 +142,7 @@ export const projects: ProjectType[] = [
     github: 'https://github.com/gregsypek/pizzarella',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Miodek_v4',
     images: [
       './projects/miodek1.png',
@@ -135,22 +155,6 @@ export const projects: ProjectType[] = [
     tags: ['React', 'Next', 'Tailwind', 'Stripe', 'Sanity', '2023'],
     live: 'https://miodek4.vercel.app/',
     github: 'https://github.com/gregsypek/miodek4',
-  },
-  {
-    id: 5,
-    title: 'Schody Zaliński',
-    images: [
-      './projects/schody1.png',
-      './projects/schody2.png',
-      './projects/schody3.png',
-      './projects/schody4.png',
-      './projects/schody5.png',
-    ],
-    fullView: './projects/schody_full.png',
-    desc: 'I designed and developed the website for Schody Zaliński using WordPress. This project involved creating a custom logo, crafting the content, and designing the entire layout. The site showcases a range of wooden staircases, highlighting both modern and classic designs. Key features include detailed product descriptions, high-quality images, and a user-friendly interface that ensures a seamless browsing experience. The focus was on blending aesthetic appeal with functionality to enhance user engagement and satisfaction.',
-    tags: ['Wordpress', 'PHP', 'MySQL', 'Scss', '2024'],
-    live: 'https://schodyzalinski.pl',
-    github: 'https://github.com/gregsypek/carpentry2',
   },
   {
     id: 6,
