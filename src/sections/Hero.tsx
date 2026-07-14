@@ -1,9 +1,10 @@
-import Button from '../components/Button';
-import { motion } from 'framer-motion';
-import { Link as ScrollLink } from 'react-scroll';
-import { skills } from '../constants';
-import SlidingText from '../components/SlidingText';
 import { useEffect, useState } from 'react';
+
+import Button from '../components/Button';
+import { Link as ScrollLink } from 'react-scroll';
+import SlidingText from '../components/SlidingText';
+import { motion } from 'framer-motion';
+import { skills } from '../constants';
 
 const textVariants = {
   initial: { opacity: 0, y: -20 },
@@ -46,11 +47,11 @@ const Hero = () => {
         }}
       >
         <motion.h1 className="relative z-20 bg-text-gradient bg-clip-text text-left align-middle text-[48px] font-bold leading-10 text-transparent sm:text-[60px] sm:leading-none md:text-[80px] xl:text-8xl">
-          Frontend Developer & Web Enthusiast
+          Full-Stack Software Developer
         </motion.h1>
         <motion.p className="md:paragraph relative z-20 mt-6 w-2/3 text-left text-sm leading-tight text-dark-grey md:w-3/5 xl:mt-[86px]">
-          Hi, my name is Grzegorz Sypek, I design, create web pages and projects
-          with attention to details and clarity.
+          Hi, I'm Grzegorz Sypek. I build reliable web applications, combining
+          solid technical foundations with a strong analytical mindset.
         </motion.p>
         <motion.div className="relative z-20 mt-6 flex flex-wrap items-start justify-start gap-8 max-lg:flex-col xl:mt-12">
           <ScrollLink
