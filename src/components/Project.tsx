@@ -1,8 +1,9 @@
-import { useCallback, useRef, useState } from 'react';
-import Button from './Button';
 import { LuArrowLeftCircle, LuGithub } from 'react-icons/lu';
+import { UseInViewOptions, motion, useInView } from 'framer-motion';
+import { useCallback, useRef, useState } from 'react';
+
+import Button from './Button';
 import { LuArrowRightCircle } from 'react-icons/lu';
-import { motion, useInView, UseInViewOptions } from 'framer-motion';
 import { ProjectType } from '../types/types';
 
 const tagVariants = {
@@ -83,7 +84,7 @@ const Project = ({ project }: ProjectProps) => {
           variants={tagVariants}
           initial="initial"
           animate={isInView ? 'animate' : 'initial'}
-          whileInView="animate"
+          // whileInView="animate"
           ref={ref}
         >
           {tags.length > 0
@@ -96,7 +97,7 @@ const Project = ({ project }: ProjectProps) => {
         </motion.ul>
         <div className="mx-auto my-auto hidden gap-5 lg:mx-0 lg:flex">
           <a
-            onClick={isSingleImage ? undefined : handleNext}
+            onClick={isSingleImage ? undefined : handlePrev}
             className={` ${isSingleImage ? 'opacity-50 hover:cursor-not-allowed' : 'hover:cursor-pointer'}`}
           >
             <div className="group">
@@ -109,8 +110,7 @@ const Project = ({ project }: ProjectProps) => {
             </div>
           </a>
           <a
-            onClick={isSingleImage ? undefined : handlePrev}
-            // disabled={isSingleImage}
+            onClick={isSingleImage ? undefined : handleNext}
             className={` ${isSingleImage ? 'opacity-50 hover:cursor-not-allowed' : 'hover:cursor-pointer'}`}
           >
             <div className="group">
@@ -144,7 +144,7 @@ const Project = ({ project }: ProjectProps) => {
             </div>
             <div className="mx-auto my-auto flex gap-5 lg:mx-0 lg:hidden">
               <a
-                onClick={isSingleImage ? undefined : handleNext}
+                onClick={isSingleImage ? undefined : handlePrev}
                 className={` ${isSingleImage ? 'opacity-50 hover:cursor-not-allowed' : 'hover:cursor-pointer'}`}
               >
                 <div className="group">
@@ -157,7 +157,7 @@ const Project = ({ project }: ProjectProps) => {
                 </div>
               </a>
               <a
-                onClick={isSingleImage ? undefined : handlePrev}
+                onClick={isSingleImage ? undefined : handleNext}
                 className={` ${isSingleImage ? 'opacity-50 hover:cursor-not-allowed' : 'hover:cursor-pointer'}`}
               >
                 <div className="group">
