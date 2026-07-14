@@ -1,6 +1,8 @@
-import { useRef } from 'react';
-import { motion } from 'framer-motion';
 import { ExperienceType, SkillBoxType } from '../types/types';
+
+import { motion } from 'framer-motion';
+import { useRef } from 'react';
+
 const skillsVariants = {
   initial: {
     opacity: 0,
@@ -64,10 +66,15 @@ function SkillBox({
                 initial="initial"
                 whileInView="animate"
                 key={lang.name}
-                className={`&& border "border-${border} border-x" } m-2 flex h-[30px] w-[100px] items-center justify-center rounded-md text-xs hover:cursor-pointer md:h-[50px] md:w-[120px] md:text-base`}
+                // Usunięty zepsuty ciąg znaków, dodany czysty Tailwind
+                className="m-2 flex h-[30px] w-[100px] items-center justify-center rounded-md text-xs transition-all duration-500 hover:cursor-pointer md:h-[50px] md:w-[120px] md:text-base"
                 style={{
                   backgroundColor: background,
                   color: color,
+                  // Ramki obsługujemy natywnym stylem CSS, bo operujemy na HEXach
+                  borderColor: border,
+                  // borderWidth: border === 'transparent' ? '0px' : '1px',
+                  borderStyle: 'solid',
                   gridColumn: lang.column,
                   gridRow: lang.row,
                   borderWidth: '0.5px',

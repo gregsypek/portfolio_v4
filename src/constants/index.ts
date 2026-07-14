@@ -199,24 +199,25 @@ export const experience: ExperienceType[] = [
     year: '2023',
     title: 'React Native Developer',
     name: 'SOLVE-NET',
-    desc: 'I have experience working with technologies such as React, React Native, TypeScript, and Node.js. I enhanced an existing mobile app for the construction industry by adding features, optimizing functionality, and developing a Node.js program for language translation. My experience at SOLVE-NET enriched my skills in project development using tools like Redmine.',
-    languages: ['React', 'React Native', 'Typescript', 'Node'],
+    desc: "Developed and maintained a mobile application for the construction sector using React Native, TypeScript, and Node.js. Focused on implementing new features, optimizing performance, and ensuring high code quality. Proactively designed and built a custom Node.js CLI tool for automated language translation, significantly accelerating the team's workflow.",
+    languages: ['React Native', 'React', 'TypeScript', 'Node.js'],
   },
   {
     id: 1,
     year: '2022',
-    title: 'Junior Application Developer',
+    title: 'Frontend Developer',
     name: 'ZETO',
-    desc: 'I enjoyed working on an extensive marketplace application using Vue.js and Next.js. I utilized project management tools like Azure DevOps and Redmine, collaborating in a team environment with both frontend and backend developers. Our primary focus was implementing fixes, optimizing, and expanding platform functionalities, significantly contributing to product improvement.',
-    languages: ['React', 'Vue', 'Nuxt', 'Bootstrap', 'Scss'],
+    desc: 'Co-developed a comprehensive B2B e-commerce marketplace using Vue.js and Nuxt.js. Collaborated closely with backend developers and QA to deliver high-quality features and optimize the user interface. Managed daily tasks and code versioning using Azure DevOps and Redmine in an agile environment.',
+    languages: ['Vue.js', 'Nuxt.js', 'React', 'Bootstrap', 'SCSS'],
   },
   {
     id: 2,
     year: '2021',
-    title: 'Fronted Developer',
+    title: 'Full-Stack Freelancer',
     name: 'FREELANCE',
-    desc: 'At the start of my freelance journey, I developed websites for my first clients, building the foundation for my web development skills.',
-    languages: ['JavaScript', 'Scss', 'Php'],
+    desc: 'Delivering end-to-end web applications and business websites for private clients. Managing the entire software lifecycle: from UI/UX design and database modeling to backend implementation and production deployment. Focused on scalable architectures and modern tech stacks.',
+    // Aktualizujemy stack na to, w czym faktycznie teraz robisz projekty!
+    languages: ['Next.js', 'React', 'Prisma', 'Tailwind', 'WordPress'],
   },
 ];
 

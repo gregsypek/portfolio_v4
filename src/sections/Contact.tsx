@@ -21,11 +21,8 @@ const variants = {
 };
 
 const publicKey = import.meta.env.VITE_PUBLIC_KEY;
-console.log('🚀 ~ publicKey:', publicKey);
 const serviceId = import.meta.env.VITE_APP_SERVICE_ID;
-console.log('🚀 ~ serviceId:', serviceId);
 const templateId = import.meta.env.VITE_APP_TEMPLATE_ID;
-console.log('🚀 ~ templateId:', templateId);
 const Contact = () => {
   const ref = useRef<HTMLInputElement | null>(null);
   const formRef = useRef<HTMLFormElement | null>(null);
