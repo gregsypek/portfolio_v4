@@ -50,8 +50,8 @@ const Footer = () => {
       </div>
       <div className="absolute bottom-40 z-20 flex flex-col gap-10 self-center uppercase sm:static">
         <a
-          href="/cv/CV_GRZEGORZ_SYPEK_P_2024.pdf"
-          download="CV_GRZEGORZ_SYPEK_P_2024.pdf"
+          href="/cv/GRZEGORZ_SYPEK_CV_2026_P.pdf"
+          download="GRZEGORZ_SYPEK_CV_2026_P.pdf"
           rel="noopener noreferrer"
         >
           <Button type="empty">GET MY CV AS PDF FILE </Button>
